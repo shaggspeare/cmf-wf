@@ -2081,8 +2081,8 @@ textarea.w-input, textarea.w-select {
   --_letter-spacing---ls-1: -.01em;
   --dark-2: #333;
   --_line-height---lh-122: 122%;
-  --_font-size---fz-240: 240px;
-  --_line-height---lh-74: 74%;
+  --_font-size---fz-240: 200px;
+  --_line-height---lh-74: 85%;
   --_line-height---lh-80: 80%;
   --_line-height---lh-90: 90%;
   --_letter-spacing---ls-0: 0em;
@@ -3554,7 +3554,7 @@ blockquote {
 }
 
 .logo {
-  width: 100%;
+  width: 50%;
 }
 
 .btn-icon {
@@ -6134,7 +6134,7 @@ blockquote {
 
   .hero-about-thumb {
     object-fit: cover;
-    height: 100%;
+    height: 70%;
   }
 
   .hero-about-title {
