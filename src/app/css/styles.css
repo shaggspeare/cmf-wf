@@ -2047,11 +2047,11 @@ textarea.w-input, textarea.w-select {
 }
 
 :root {
-  --_font-family---inter: Inter, sans-serif;
+  --_font-family---inter: var(--font-inter), Inter, sans-serif;
   --dark: #0c0407;
   --_font-size---fz-16: 16px;
   --_line-height---lh-150: 150%;
-  --_font-family---poppins: Poppins, sans-serif;
+  --_font-family---poppins: var(--font-manrope), Manrope, sans-serif;
   --_font-size---fz-72: 72px;
   --_line-height---lh-96: 96%;
   --_letter-spacing---ls-5: -.05em;
