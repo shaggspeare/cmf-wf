@@ -1,3 +1,5 @@
+import './styles/Services.css';
+
 export default function Services() {
   return (
     <div className="services-section">

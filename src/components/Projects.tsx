@@ -1,3 +1,5 @@
+import './styles/Projects.css';
+
 export default function Projects() {
   return (
     <div className="projects-section">

@@ -1,0 +1,135 @@
+/* Image Text Section Component Styles */
+
+.image-text-section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  position: relative;
+}
+
+.image-text-layout {
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image-text-layout.image-left {
+  flex-direction: row;
+}
+
+.image-text-layout.image-right {
+  flex-direction: row-reverse;
+}
+
+.image-text-content {
+  width: 100%;
+  max-width: 480px;
+  flex: 1;
+}
+
+.image-text-image-wrap {
+  flex: 1;
+  max-width: 520px;
+  overflow: hidden;
+}
+
+.image-text-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-text-image:hover {
+  transform: scale(1.02);
+}
+
+.image-text-title-wrap {
+  margin-bottom: 24px;
+}
+
+.image-text-title {
+  font-size: var(--_font-size---fz-40);
+  line-height: var(--_line-height---lh-110);
+  font-weight: 600;
+  color: var(--dark);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.image-text-text-wrap {
+  max-width: 100%;
+}
+
+.image-text-text {
+  font-size: var(--_font-size---fz-16);
+  line-height: var(--_line-height---lh-150);
+  letter-spacing: var(--_letter-spacing---ls-1);
+  color: var(--dark-2);
+  margin: 0;
+  white-space: pre-line;
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 991px) {
+  .image-text-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .image-text-layout {
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+
+  .image-text-layout.image-left,
+  .image-text-layout.image-right {
+    flex-direction: column;
+  }
+
+  .image-text-content {
+    max-width: 100%;
+  }
+
+  .image-text-image-wrap {
+    max-width: 100%;
+    order: -1;
+  }
+
+  .image-text-title {
+    font-size: var(--_font-size---fz-32);
+  }
+
+  .image-text-title-wrap {
+    margin-bottom: 20px;
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+  .image-text-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .image-text-layout {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+
+  .image-text-title {
+    font-size: var(--_font-size---fz-24);
+  }
+
+  .image-text-text {
+    font-size: var(--_font-size---fz-14);
+  }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 479px) {
+  .image-text-title {
+    font-size: var(--_font-size---fz-20);
+  }
+}

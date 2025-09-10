@@ -1,3 +1,5 @@
+import "./styles/Hero.css";
+
 export default function Hero() {
   return (
     <div className="hero-section">
@@ -5,7 +7,11 @@ export default function Hero() {
         <div className="container">
           <div className="hero-content">
             <div className="hero-title-wrap">
-              <h1 className="hero-title home">CMF Design<br />Course</h1>
+              <h1 className="hero-title home">
+                CMF Design
+                <br />
+                Course
+              </h1>
             </div>
             <div className="hero-sub-title-wrap">
               <h2 className="hero-sub-title">
@@ -39,21 +45,29 @@ export default function Hero() {
                   className="hero-about-thumb"
                 />
               </div>
-              <div className="hero-about-title-wrap">
-                <h3 className="hero-about-title">About Me</h3>
-              </div>
               <div className="hero-about-text-wrap">
                 <p className="hero-about-text">
-                  A seasoned UI/UX designer dedicated to bridging creativity
-                  with user-centric design principles, sculpting intuitive
-                  digital experiences that resonate with audiences. With a knack
-                  for transforming ideas into visually compelling interfaces.
+                  Це унікальний курс, який поєднує три ключові складові
+                  сучасного предметного дизайну:
+                </p>
+                <ul>
+                  <li>Проєктування</li>
+                  <li>Морфологію</li>
+                  <li>CMF Design (колір, матеріал, текстура)</li>
+                </ul>
+                <p className="hero-about-text">
+                  Ви пройдете повний шлях — від аналізу завдання до створення
+                  скетчів, хто володіє програмами 3D-модель з продуманою
+                  концепцією, стилістикою і CMF-пропозицією.
+                  <br />
+                  Курс створений для дизайнерів, які хочуть працювати глибше,
+                  свідоміше й актуальніше.
                 </p>
               </div>
               <div className="hero-about-btn-wrap">
                 <a href="/about" className="primary-btn w-inline-block">
                   <div className="btn-inner">
-                    <div>View More</div>
+                    <div>Хочу на курс</div>
                     <div className="btn-icon-wrap">
                       <div className="btn-icon w-embed">
                         <svg
@@ -91,9 +105,8 @@ export default function Hero() {
             </div>
             <div className="hero-about-thumb-wrap">
               <img
-                src="images/cmf/hero.jpg"
+                src="images/cmf/horizontal-cmf.jpg"
                 loading="lazy"
-
                 alt="hero-thumb"
                 className="hero-about-thumb"
               />
