@@ -73,7 +73,7 @@ export default function Reviews() {
                   className={`reviews-item-text ${expandedReview !== 1 ? "reviews-item-text-long reviews-item-text-expandable" : ""}`}
                   onClick={() => handleToggleExpand(1)}
                 >
-                  &quot;Валерію, дякую за цей прикрасний курс &ldquo;Морфологія
+                  &quot;Валеріє, дякую за цей прикрасний курс &ldquo;Морфологія
                   в дизайні&rdquo;! Для себе відкрила багато нового у світі
                   дизайну, навчилась тепер якось інакше дивитись на все, що мене
                   оточує. Ознайомилася з різними стилями, з творцями, які змогли
@@ -139,7 +139,7 @@ export default function Reviews() {
             <div className="reviews-item">
               <div className="reviews-item-text-wrap">
                 <p className="reviews-item-text">
-                  &quot;Вдячна Валері за величезну кількість корисної
+                  &quot;Вдячна Валерії за величезну кількість корисної
                   інформації, якою поділилася! За напрямок у розвитку, за
                   цікавий погляд на світ дизайну! За відповіді на мої запитання!
                   За позитив і легкість!&quot;
@@ -164,9 +164,9 @@ export default function Reviews() {
               <p className="reviews-instagram-text">
                 Більше відгуків на інстаграм сторінці
               </p>
-              <a 
-                href="https://instagram.com/designmarket_mzkk" 
-                target="_blank" 
+              <a
+                href="https://instagram.com/designmarket_mzkk"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="reviews-instagram-link"
               >
