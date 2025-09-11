@@ -21,10 +21,10 @@ export default function Reviews() {
             <div className="reviews-item">
               <div className="reviews-item-text-wrap">
                 <p className="reviews-item-text">
-                  "Working with Philips was game-changer. His attention to
+                  &quot;Working with Philips was game-changer. His attention to
                   detail and creativity took our project to a new level. The
                   final product was beyond our expectations, and the
-                  process."
+                  process.&quot;
                 </p>
               </div>
               <div className="reviews-item-info-wrap">
@@ -95,10 +95,10 @@ export default function Reviews() {
             <div className="reviews-item">
               <div className="reviews-item-text-wrap">
                 <p className="reviews-item-text">
-                  "I can&#x27;t recommend Philips enough. He turned our
+                  &quot;I can&#x27;t recommend Philips enough. He turned our
                   vague ideas into a cohesive, beautiful design that
                   perfectly captured our brand. His ability understand
-                  vision was impressive."
+                  vision was impressive.&quot;
                 </p>
               </div>
               <div className="reviews-item-info-wrap">
