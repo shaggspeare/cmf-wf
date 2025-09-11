@@ -34,10 +34,10 @@ export default function FAQ() {
                 </div>
                 <div className="faq-text-wrap">
                   <p className="faq-text">
-                    To begin, I'll need a clear understanding of your goals,
+                    To begin, I&apos;ll need a clear understanding of your goals,
                     target audience, brand guidelines (if available), and
                     any specific features or design preferences you have in
-                    mind. I'll guide you through the details during our
+                    mind. I&apos;ll guide you through the details during our
                     initial consultation.
                   </p>
                 </div>
@@ -57,10 +57,10 @@ export default function FAQ() {
                 </div>
                 <div className="faq-text-wrap">
                   <p className="faq-text">
-                    To begin, I'll need a clear understanding of your goals,
+                    To begin, I&apos;ll need a clear understanding of your goals,
                     target audience, brand guidelines (if available), and
                     any specific features or design preferences you have in
-                    mind. I'll guide you through the details during our
+                    mind. I&apos;ll guide you through the details during our
                     initial consultation.
                   </p>
                 </div>
@@ -80,10 +80,10 @@ export default function FAQ() {
                 </div>
                 <div className="faq-text-wrap">
                   <p className="faq-text">
-                    To begin, I'll need a clear understanding of your goals,
+                    To begin, I&apos;ll need a clear understanding of your goals,
                     target audience, brand guidelines (if available), and
                     any specific features or design preferences you have in
-                    mind. I'll guide you through the details during our
+                    mind. I&apos;ll guide you through the details during our
                     initial consultation.
                   </p>
                 </div>
@@ -103,10 +103,10 @@ export default function FAQ() {
                 </div>
                 <div className="faq-text-wrap">
                   <p className="faq-text">
-                    To begin, I'll need a clear understanding of your goals,
+                    To begin, I&apos;ll need a clear understanding of your goals,
                     target audience, brand guidelines (if available), and
                     any specific features or design preferences you have in
-                    mind. I'll guide you through the details during our
+                    mind. I&apos;ll guide you through the details during our
                     initial consultation.
                   </p>
                 </div>
@@ -124,10 +124,10 @@ export default function FAQ() {
                 </div>
                 <div className="faq-text-wrap">
                   <p className="faq-text">
-                    To begin, I'll need a clear understanding of your goals,
+                    To begin, I&apos;ll need a clear understanding of your goals,
                     target audience, brand guidelines (if available), and
                     any specific features or design preferences you have in
-                    mind. I'll guide you through the details during our
+                    mind. I&apos;ll guide you through the details during our
                     initial consultation.
                   </p>
                 </div>
