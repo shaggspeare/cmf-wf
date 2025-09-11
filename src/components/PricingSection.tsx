@@ -6,6 +6,8 @@ interface PricingPlan {
   originalPrice?: string;
   features: string[];
   isPopular?: boolean;
+  isPremium?: boolean;
+  isVip?: boolean;
 }
 
 export default function PricingSection() {
@@ -47,7 +49,8 @@ export default function PricingSection() {
         "2 індивідуальні online консультації",
         "Список міжнародних дизайн виставок",
         "Сертифікат о проходженні курсу"
-      ]
+      ],
+      isPremium: true
     },
     {
       name: "VIP",
@@ -64,7 +67,8 @@ export default function PricingSection() {
         "2 індивідуальні online консультації",
         "Доводимо вашу ідею до прототипу",
         "Сертифікат о проходженні курсу"
-      ]
+      ],
+      isVip: true
     }
   ];
 
@@ -79,7 +83,7 @@ export default function PricingSection() {
           
           <div className="pricing-layout">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`pricing-card ${plan.isPopular ? 'is-popular' : ''}`}>
+              <div key={index} className={`pricing-card ${plan.isPopular ? 'is-popular' : ''} ${plan.isPremium ? 'is-premium' : ''} ${plan.isVip ? 'is-vip' : ''}`}>
                 {plan.isPopular && (
                   <div className="pricing-popular-badge">Популярний</div>
                 )}

@@ -112,6 +112,42 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
+.pricing-card.is-premium {
+  background-color: #f8f6ff !important;
+  border-color: var(--dark) !important;
+  color: var(--dark) !important;
+}
+
+.pricing-card.is-premium:hover {
+  box-shadow: 8px 8px 0 #e0d9ff !important;
+}
+
+.pricing-card.is-vip {
+  background-color: #6b46c1 !important;
+  border-color: #6b46c1 !important;
+  color: var(--white) !important;
+}
+
+.pricing-card.is-vip:hover {
+  box-shadow: 8px 8px 0 #553c9a !important;
+}
+
+.pricing-card.is-vip .pricing-original-price {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.pricing-card.is-vip .primary-btn {
+  background-color: var(--white);
+  color: #6b46c1;
+  border-color: var(--white);
+}
+
+.pricing-card.is-vip .primary-btn:hover {
+  background-color: #e0d9ff;
+  color: #553c9a;
+  border-color: #e0d9ff;
+}
+
 .pricing-features {
   margin-bottom: 32px;
 }
