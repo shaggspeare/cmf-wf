@@ -1,4 +1,5 @@
 import ImageTextSection from "./ImageTextSection";
+import ShapeBackground from "./ShapeBackground";
 
 export default function AboutSection() {
   const aboutText = `<p>Я — <strong>Валерія Варі</strong> промисловий / предметний / інтер'єрний дизайнер з <strong>12-річним міжнародним досвідом</strong>.</p>
@@ -15,13 +16,16 @@ export default function AboutSection() {
 <p>Сьогодні зона моєї професійної спеціалізації охоплює проєктування меблів різного рівня складності, освітлювальних приладів, предметного декору, а також розробку інтер'єрних рішень для приватних просторів, об'єктів сектору HORECA та homestaging — декорування простору для особистого користування або з метою продажу нерухомості.</p>`;
 
   return (
-    <ImageTextSection
-      title="Про мене"
-      text={aboutText}
-      imageSrc="/images/cmf/valeria.jpg"
-      imageAlt="Валерія Варі - дизайнер"
-      imageOnRight={true}
-      className="about-section"
-    />
+    <div style={{ position: 'relative' }}>
+      <ImageTextSection
+        title="Про мене"
+        text={aboutText}
+        imageSrc="/images/cmf/valeria.jpg"
+        imageAlt="Валерія Варі - дизайнер"
+        imageOnRight={true}
+        className="about-section"
+      />
+      <ShapeBackground variant="center" />
+    </div>
   );
 }

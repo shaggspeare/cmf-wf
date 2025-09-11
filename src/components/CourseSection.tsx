@@ -14,13 +14,15 @@ export default function CourseSection() {
 <p><strong>Курс створений для дизайнерів, які хочуть працювати глибше, свідоміше й актуальніше.</strong></p>`;
 
   return (
-    <ImageTextSection
-      title="Про курс"
-      text={courseText}
-      imageSrc="/images/cmf/course-cover.jpg"
-      imageAlt="Курс CMF Design"
-      imageOnRight={false}
-      className="course-section"
-    />
+    <div style={{ position: 'relative' }}>
+      <ImageTextSection
+        title="Про курс"
+        text={courseText}
+        imageSrc="/images/cmf/course-cover.jpg"
+        imageAlt="Курс CMF Design"
+        imageOnRight={false}
+        className="course-section"
+      />
+    </div>
   );
 }

@@ -1,0 +1,87 @@
+/* ShapeBackground Component Styles */
+
+.shape-background-wrap {
+  z-index: -1;
+  pointer-events: none;
+  position: absolute;
+}
+
+.shape-background-wrap.hero-variant {
+  inset: -250px -250px auto auto;
+}
+
+.shape-background-wrap.center-variant {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.common-shape-wrap.shape-background {
+  /* Base styles for shape backgrounds */
+}
+
+.common-shape-wrap.shape-background.hero-shape {
+  filter: blur(40px);
+  width: 642px;
+  max-width: 642px;
+}
+
+.common-shape-wrap.shape-background.center-shape {
+  filter: blur(40px);
+  width: 400px;
+  max-width: 400px;
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 991px) {
+  .common-shape-wrap.shape-background.hero-shape {
+    filter: blur(20px);
+    width: 400px;
+    max-width: 400px;
+  }
+
+  .shape-background-wrap.hero-variant {
+    top: -160px;
+    right: -160px;
+    bottom: auto;
+    left: auto;
+  }
+
+  .common-shape-wrap.shape-background.center-shape {
+    filter: blur(30px);
+    width: 300px;
+    max-width: 300px;
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+  .shape-background-wrap.hero-variant {
+    top: -200px;
+    right: -200px;
+    bottom: auto;
+    left: auto;
+  }
+
+  .common-shape-wrap.shape-background.center-shape {
+    filter: blur(25px);
+    width: 250px;
+    max-width: 250px;
+  }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 479px) {
+  .shape-background-wrap.hero-variant {
+    top: -250px;
+    right: -250px;
+    bottom: auto;
+    left: auto;
+  }
+
+  .common-shape-wrap.shape-background.center-shape {
+    filter: blur(20px);
+    width: 200px;
+    max-width: 200px;
+  }
+}

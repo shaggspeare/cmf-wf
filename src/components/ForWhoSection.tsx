@@ -1,4 +1,5 @@
 import ImageTextSection from "./ImageTextSection";
+import ShapeBackground from "./ShapeBackground";
 
 export default function ForWhoSection() {
   const forWhoText = `<ul>
@@ -11,13 +12,16 @@ export default function ForWhoSection() {
 </ul>`;
 
   return (
-    <ImageTextSection
-      title="Для кого курс?"
-      text={forWhoText}
-      imageSrc="/images/cmf/salone_exhibition.jpg"
-      imageAlt="Презентація курсу"
-      imageOnRight={false}
-      className="for-who-section"
-    />
+    <div style={{ position: 'relative' }}>
+      <ImageTextSection
+        title="Для кого курс?"
+        text={forWhoText}
+        imageSrc="/images/cmf/salone_exhibition.jpg"
+        imageAlt="Презентація курсу"
+        imageOnRight={false}
+        className="for-who-section"
+      />
+      <ShapeBackground variant="center" />
+    </div>
   );
 }

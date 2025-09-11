@@ -1,4 +1,5 @@
 import ImageTextSection from "./ImageTextSection";
+import ShapeBackground from "./ShapeBackground";
 
 export default function BenefitsSection() {
   const benefitsText = `<ul>
@@ -10,13 +11,16 @@ export default function BenefitsSection() {
 </ul>`;
 
   return (
-    <ImageTextSection
-      title="Що ви отримаєте?"
-      text={benefitsText}
-      imageSrc="/images/cmf/texture.png"
-      imageAlt="Текстури та матеріали"
-      imageOnRight={true}
-      className="benefits-section"
-    />
+    <div style={{ position: 'relative' }}>
+      <ImageTextSection
+        title="Що ви отримаєте?"
+        text={benefitsText}
+        imageSrc="/images/cmf/texture.png"
+        imageAlt="Текстури та матеріали"
+        imageOnRight={true}
+        className="benefits-section"
+      />
+      <ShapeBackground variant="center" />
+    </div>
   );
 }

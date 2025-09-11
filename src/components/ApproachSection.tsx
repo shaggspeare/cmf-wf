@@ -17,13 +17,15 @@ export default function ApproachSection() {
 </ul>`;
 
   return (
-    <ImageTextSection
-      title="Мій підхід"
-      text={approachText}
-      imageSrc="/images/cmf/moodboard.jpeg"
-      imageAlt="Мудборд дизайну"
-      imageOnRight={true}
-      className="approach-section"
-    />
+    <div style={{ position: 'relative' }}>
+      <ImageTextSection
+        title="Мій підхід"
+        text={approachText}
+        imageSrc="/images/cmf/moodboard.jpeg"
+        imageAlt="Мудборд дизайну"
+        imageOnRight={true}
+        className="approach-section"
+      />
+    </div>
   );
 }

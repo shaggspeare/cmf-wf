@@ -1,4 +1,5 @@
 import "./styles/Hero.css";
+import ShapeBackground from "./ShapeBackground";
 
 export default function Hero() {
   return (
@@ -119,16 +120,11 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="hero-shape-wrap">
-        <div className="common-shape-wrap hero-shape">
-          <img
-            src="images/c-shape-2.svg"
-            loading="lazy"
-            alt="c-shape-2"
-            className="common-shape"
-          />
-        </div>
-      </div>
+      <ShapeBackground 
+        variant="hero"
+        imageSrc="images/c-shape-2.svg"
+        imageAlt="c-shape-2"
+      />
     </div>
   );
 }
