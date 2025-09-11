@@ -108,6 +108,30 @@ export default function Hero() {
                   <div className="btn-shape"></div>
                 </a>
               </div>
+              <div className="hero-social-block">
+                <div className="hero-social-item">
+                  <span className="hero-social-label">Instagram:</span>
+                  <a 
+                    href="https://instagram.com/valeria_vari_design" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hero-social-link"
+                  >
+                    @valeria_vari_design
+                  </a>
+                </div>
+                <div className="hero-social-item">
+                  <span className="hero-social-label">WhatsApp/Telegram:</span>
+                  <a 
+                    href="https://wa.me/393278445410" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hero-social-link"
+                  >
+                    +393278445410
+                  </a>
+                </div>
+              </div>
             </div>
             <div className="hero-about-thumb-wrap">
               <img

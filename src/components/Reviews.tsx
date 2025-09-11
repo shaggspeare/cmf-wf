@@ -1,31 +1,56 @@
-import './styles/Reviews.css';
+"use client";
+
+import { useState } from "react";
+import "./styles/Reviews.css";
 
 export default function Reviews() {
+  const [expandedReview, setExpandedReview] = useState<number | null>(null);
+
+  const handleToggleExpand = (index: number) => {
+    setExpandedReview(expandedReview === index ? null : index);
+  };
   return (
     <div className="reviews-section">
       <div className="section-spacing">
         <div className="container">
           <div className="section-heading projects-heading">
             <div className="section-title-wrap">
-              <h2 className="section-title">Clients Reviews</h2>
+              <h2 className="section-title">Відгуки студентів</h2>
             </div>
             <div className="section-text-wrap">
               <p className="section-text">
-                With a deep understanding of design principles and industry
-                trends, I provide services that empower clients to achieve
-                their unique objectives.
+                Відгуки моїх студентів про курс з проєктування меблів та CMF
+                Design.
               </p>
             </div>
           </div>
           <div className="reviews-layout">
             <div className="reviews-item">
               <div className="reviews-item-text-wrap">
-                <p className="reviews-item-text">
-                  &quot;Working with Philips was game-changer. His attention to
-                  detail and creativity took our project to a new level. The
-                  final product was beyond our expectations, and the
-                  process.&quot;
+                <p
+                  className={`reviews-item-text ${expandedReview !== 0 ? "reviews-item-text-long reviews-item-text-expandable" : ""}`}
+                  onClick={() => handleToggleExpand(0)}
+                >
+                  &quot;Валерія, Добрий день! Хочу подякувати Вам за весь цей
+                  чудовий курс! Дякуємо за щедрість, професіоналізм, якими Ви
+                  сміливо ділитеся! Дякую за величезну кількість корисної,
+                  прикладної інформації, за структурний підхід. Завдяки цьому
+                  курсу прийшло розуміння, що творець, дизайн, це насамперед
+                  система знань. Дякую за чудову атмосферу! Жаль, що я не
+                  встигну взяти участь у zoom конференції. Із задоволенням
+                  приєднаюся до інших Ваших курсів.&quot;
                 </p>
+                {expandedReview !== 0 && (
+                  <button
+                    className="reviews-item-expand-btn"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleToggleExpand(0);
+                    }}
+                  >
+                    Читати повністю
+                  </button>
+                )}
               </div>
               <div className="reviews-item-info-wrap">
                 <div className="reviews-item-author-wrap">
@@ -37,39 +62,38 @@ export default function Reviews() {
                   />
                 </div>
                 <div className="reviews-item-info">
-                  <p className="reviews-item-author-name">Ron Pagac</p>
-                  <p className="reviews-item-author-info">
-                    Project Manager
-                  </p>
+                  <p className="reviews-item-author-name">Студентка курсу</p>
+                  <p className="reviews-item-author-info">CMF Design</p>
                 </div>
               </div>
             </div>
             <div className="reviews-item">
-              <div className="reviews-item-thumb-wrap">
-                <div className="reviews-item-video w-embed">
-                  <video
-                    className="top-video"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
+              <div className="reviews-item-text-wrap">
+                <p
+                  className={`reviews-item-text ${expandedReview !== 1 ? "reviews-item-text-long reviews-item-text-expandable" : ""}`}
+                  onClick={() => handleToggleExpand(1)}
+                >
+                  &quot;Валерію, дякую за цей прикрасний курс &ldquo;Морфологія
+                  в дизайні&rdquo;! Для себе відкрила багато нового у світі
+                  дизайну, навчилась тепер якось інакше дивитись на все, що мене
+                  оточує. Ознайомилася з різними стилями, з творцями, які змогли
+                  вплинути своїми творами на світ та історію дизайну. Тепер
+                  знаю, як можна надихатися, не копіювати, а творити щось нове,
+                  своє. Отримані знання дуже допомагають мені в роботі, простіше
+                  стало побачити в робочих об&apos;єктах, що не так, як зробити
+                  краще.&quot;
+                </p>
+                {expandedReview !== 1 && (
+                  <button
+                    className="reviews-item-expand-btn"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleToggleExpand(1);
                     }}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    poster="images/video-full-1-poster-00001.jpg"
                   >
-                    <source
-                      src="images/video-full-1-transcode.mp4"
-                      type="video/mp4"
-                    />
-                    <source
-                      src="images/video-full-1-transcode.webm"
-                      type="video/webm"
-                    />
-                  </video>
-                </div>
+                    Читати повністю
+                  </button>
+                )}
               </div>
               <div className="reviews-item-info-wrap">
                 <div className="reviews-item-author-wrap">
@@ -81,12 +105,8 @@ export default function Reviews() {
                   />
                 </div>
                 <div className="reviews-item-info">
-                  <p className="reviews-item-author-name">
-                    Desiree Langosh
-                  </p>
-                  <p className="reviews-item-author-info">
-                    Creative Director
-                  </p>
+                  <p className="reviews-item-author-name">Студентка курсу</p>
+                  <p className="reviews-item-author-info">CMF Design</p>
                 </div>
               </div>
             </div>
@@ -95,10 +115,10 @@ export default function Reviews() {
             <div className="reviews-item">
               <div className="reviews-item-text-wrap">
                 <p className="reviews-item-text">
-                  &quot;I can&#x27;t recommend Philips enough. He turned our
-                  vague ideas into a cohesive, beautiful design that
-                  perfectly captured our brand. His ability understand
-                  vision was impressive.&quot;
+                  &quot;Добрий вечір Валерія! Хочу подякувати Вам за курс CMF
+                  DESIGN, який я пройшла. Дякуємо за нову цікаву та потрібну для
+                  майбутнього дизайнера інформацію. Нічого зайвого, все на тему.
+                  Багато нового та цікавого дізналася.&quot;
                 </p>
               </div>
               <div className="reviews-item-info-wrap">
@@ -111,41 +131,19 @@ export default function Reviews() {
                   />
                 </div>
                 <div className="reviews-item-info">
-                  <p className="reviews-item-author-name">
-                    Christina Bogan
-                  </p>
-                  <p className="reviews-item-author-info">
-                    Founder &amp; CEO
-                  </p>
+                  <p className="reviews-item-author-name">Студентка курсу</p>
+                  <p className="reviews-item-author-info">CMF Design</p>
                 </div>
               </div>
             </div>
             <div className="reviews-item">
-              <div className="reviews-item-thumb-wrap">
-                <div className="reviews-item-video w-embed">
-                  <video
-                    className="top-video"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                    }}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    poster="images/video-full-2-poster-00001.jpg"
-                  >
-                    <source
-                      src="images/video-full-2-transcode.mp4"
-                      type="video/mp4"
-                    />
-                    <source
-                      src="images/video-full-2-transcode.webm"
-                      type="video/webm"
-                    />
-                  </video>
-                </div>
+              <div className="reviews-item-text-wrap">
+                <p className="reviews-item-text">
+                  &quot;Вдячна Валері за величезну кількість корисної
+                  інформації, якою поділилася! За напрямок у розвитку, за
+                  цікавий погляд на світ дизайну! За відповіді на мої запитання!
+                  За позитив і легкість!&quot;
+                </p>
               </div>
               <div className="reviews-item-info-wrap">
                 <div className="reviews-item-author-wrap">
@@ -157,12 +155,23 @@ export default function Reviews() {
                   />
                 </div>
                 <div className="reviews-item-info">
-                  <p className="reviews-item-author-name">Pablo Schmidt</p>
-                  <p className="reviews-item-author-info">
-                    Senior Product Designer
-                  </p>
+                  <p className="reviews-item-author-name">Студентка курсу</p>
+                  <p className="reviews-item-author-info">CMF Design</p>
                 </div>
               </div>
+            </div>
+            <div className="reviews-instagram-block">
+              <p className="reviews-instagram-text">
+                Більше відгуків на інстаграм сторінці
+              </p>
+              <a 
+                href="https://instagram.com/designmarket_mzkk" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="reviews-instagram-link"
+              >
+                @designmarket_mzkk
+              </a>
             </div>
           </div>
         </div>
