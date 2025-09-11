@@ -259,6 +259,24 @@
     font-size: var(--_font-size---fz-14);
   }
 
+  .image-text-image-wrap {
+    max-width: 280px;
+    height: 280px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .image-text-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .image-text-image:hover {
+    transform: none;
+  }
+
   .image-text-text h1 { font-size: var(--_font-size---fz-28); }
   .image-text-text h2 { font-size: var(--_font-size---fz-24); }
   .image-text-text h3 { font-size: var(--_font-size---fz-20); }
@@ -279,5 +297,12 @@
 
   .image-text-title-mirror {
     font-size: var(--_font-size---fz-20);
+  }
+
+  .image-text-image-wrap {
+    max-width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    border-radius: 10px;
   }
 }
