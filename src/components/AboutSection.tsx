@@ -20,7 +20,7 @@ export default function AboutSection() {
       <ImageTextSection
         title="Про мене"
         text={aboutText}
-        imageSrc="/images/cmf/valeria.jpg"
+        imageSrc="/images/cmf/valeria.JPG"
         imageAlt="Валерія Варі - дизайнер"
         imageOnRight={true}
         className="about-section"

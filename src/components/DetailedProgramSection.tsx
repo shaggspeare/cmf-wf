@@ -62,7 +62,7 @@ export default function DetailedProgramSection({
               </div>
               <div className="detailed-program-image-wrap">
                 <img
-                  src="/images/cmf/bedlamp.jpg"
+                  src="/images/cmf/bedlamp.JPG"
                   loading="lazy"
                   alt="Презентація програми курсу 2"
                   className="detailed-program-image"

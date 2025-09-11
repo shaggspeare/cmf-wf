@@ -39,13 +39,13 @@ export default function Hero() {
                   className="hero-about-thumb"
                 />
                 <img
-                  src="images/cmf/stones.jpg"
+                  src="images/cmf/stones.JPG"
                   loading="lazy"
                   alt="image"
                   className="hero-about-thumb"
                 />
                 <img
-                  src="images/cmf/stones2.jpg"
+                  src="images/cmf/stones2.JPG"
                   loading="lazy"
                   alt="image"
                   className="hero-about-thumb"

@@ -21,7 +21,7 @@ export default function Program() {
             <div className="program-item">
               <div className="program-item-icon-wrap">
                 <img
-                  src="/images/cmf/chair1.jpg"
+                  src="/images/cmf/chair1.JPG"
                   loading="lazy"
                   alt="CMF Design"
                   className="program-item-icon"
@@ -52,7 +52,7 @@ export default function Program() {
             <div className="program-item">
               <div className="program-item-icon-wrap">
                 <img
-                  src="/images/cmf/chair2.jpg"
+                  src="/images/cmf/chair2.JPG"
                   loading="lazy"
                   alt="Морфологія в дизайні"
                   className="program-item-icon"
