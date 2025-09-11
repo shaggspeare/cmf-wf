@@ -10,6 +10,7 @@ import DetailedProgramSection from "@/components/DetailedProgramSection";
 import Program from "@/components/Program";
 import PricingSection from "@/components/PricingSection";
 import Reviews from "@/components/Reviews";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -32,6 +33,7 @@ export default function Home() {
         {/*<Clients />*/}
         <Reviews />
         {/*<FAQ />*/}
+        <Contact />
       </div>
       <Footer />
     </div>

@@ -71,7 +71,7 @@ export default function Hero() {
                 </p>
               </div>
               <div className="hero-about-btn-wrap">
-                <a href="/about" className="primary-btn w-inline-block">
+                <a href="#contact" className="primary-btn w-inline-block">
                   <div className="btn-inner">
                     <div>Хочу на курс</div>
                     <div className="btn-icon-wrap">

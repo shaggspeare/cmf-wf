@@ -22,7 +22,7 @@ export default function PricingSection() {
       ]
     },
     {
-      name: "ACTIV STANDART",
+      name: "ACTIVE STANDART",
       price: "7200 UAH",
       originalPrice: "8000 UAH",
       features: [
