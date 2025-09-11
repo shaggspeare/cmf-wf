@@ -62,6 +62,55 @@
   letter-spacing: var(--_letter-spacing---ls-4);
 }
 
+.hero-date-badge-wrap {
+  position: absolute;
+  top: 360px;
+  right: 136px;
+  z-index: 10;
+}
+
+.hero-date-badge {
+  background-color: var(--dark);
+  color: var(--white);
+  border-radius: 50px;
+  padding: 16px 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-date-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 2s ease;
+}
+
+.hero-date-badge:hover::before {
+  left: 100%;
+}
+
+.hero-date-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.hero-date-text {
+  font-size: var(--_font-size---fz-16);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .hero-about-layout {
   grid-column-gap: 40px;
   grid-row-gap: 40px;
@@ -195,6 +244,19 @@
     width: 69%;
     margin-bottom: 20px;
   }
+
+  .hero-date-badge-wrap {
+    top: 220px;
+    right: 80px;
+  }
+
+  .hero-date-badge {
+    padding: 14px 28px;
+  }
+
+  .hero-date-text {
+    font-size: var(--_font-size---fz-15);
+  }
 }
 
 /* Mobile Styles */
@@ -244,6 +306,23 @@
   .hero-about-thumb-layout {
     width: 80%;
   }
+
+  .hero-date-badge-wrap {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .hero-date-badge {
+    padding: 12px 24px;
+  }
+
+  .hero-date-text {
+    font-size: var(--_font-size---fz-14);
+    letter-spacing: 0.3px;
+  }
 }
 
 /* Small Mobile Styles */
@@ -281,6 +360,23 @@
 
   .hero-about-thumb-layout {
     width: 100%;
+  }
+
+  .hero-date-badge-wrap {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .hero-date-badge {
+    padding: 10px 20px;
+  }
+
+  .hero-date-text {
+    font-size: var(--_font-size---fz-13);
+    letter-spacing: 0.2px;
   }
 }
 

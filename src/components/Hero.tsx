@@ -21,6 +21,11 @@ export default function Hero() {
                 та CMF Design
               </h2>
             </div>
+            <div className="hero-date-badge-wrap">
+              <div className="hero-date-badge">
+                <div className="hero-date-text">Старт: 25 вересня 2025</div>
+              </div>
+            </div>
           </div>
           <div className="hero-about-layout">
             <div className="hero-about-content">

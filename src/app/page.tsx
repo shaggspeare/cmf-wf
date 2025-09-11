@@ -15,6 +15,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div className="page-wrapper">
+      {/*<Marquee />*/}
       <Navigation />
       <div className="main-wrapper">
         <Hero />
