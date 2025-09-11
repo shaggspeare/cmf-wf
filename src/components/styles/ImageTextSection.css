@@ -252,7 +252,7 @@
   }
 
   .image-text-title-mirror {
-    font-size: var(--_font-size---fz-24);
+    display: none;
   }
 
   .image-text-text {

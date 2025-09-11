@@ -8,6 +8,7 @@ import BenefitsSection from "@/components/BenefitsSection";
 import ResultsSection from "@/components/ResultsSection";
 import DetailedProgramSection from "@/components/DetailedProgramSection";
 import Program from "@/components/Program";
+import PricingSection from "@/components/PricingSection";
 import Reviews from "@/components/Reviews";
 import Footer from "@/components/Footer";
 
@@ -25,6 +26,7 @@ export default function Home() {
         <ResultsSection />
         <Program />
         <DetailedProgramSection />
+        <PricingSection />
         {/*<Projects />*/}
         {/*<Clients />*/}
         <Reviews />
