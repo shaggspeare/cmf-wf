@@ -21,13 +21,16 @@ export default function ImageTextSection({
     <div className={`image-text-section ${className}`}>
       <div className="section-spacing">
         <div className="container">
+          <div className="image-text-centered-title-wrap">
+            <h2 className="image-text-centered-title">{title}</h2>
+          </div>
           <div className={`image-text-layout ${imageOnRight ? 'image-right' : 'image-left'}`}>
             <div className="image-text-content">
               <div className="image-text-title-wrap">
-                <h2 className="image-text-title">{title}</h2>
+                <h3 className="image-text-title-mirror">{title}</h3>
               </div>
               <div className="image-text-text-wrap">
-                <p className="image-text-text">{text}</p>
+                <div className="image-text-text" dangerouslySetInnerHTML={{ __html: text }} />
               </div>
             </div>
             <div className="image-text-image-wrap">

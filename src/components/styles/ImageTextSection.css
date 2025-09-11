@@ -49,11 +49,35 @@
   margin-bottom: 24px;
 }
 
+.image-text-centered-title-wrap {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.image-text-centered-title {
+  font-size: 72px;
+  line-height: var(--_line-height---lh-110);
+  font-weight: 600;
+  color: var(--dark);
+  margin: 0;
+  text-transform: uppercase;
+}
+
 .image-text-title {
   font-size: var(--_font-size---fz-40);
   line-height: var(--_line-height---lh-110);
   font-weight: 600;
   color: var(--dark);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.image-text-title-mirror {
+  font-size: var(--_font-size---fz-40);
+  line-height: var(--_line-height---lh-110);
+  font-weight: 600;
+  color: rgba(160, 160, 160, 0.24);
   margin: 0;
   text-transform: uppercase;
 }
@@ -68,7 +92,96 @@
   letter-spacing: var(--_letter-spacing---ls-1);
   color: var(--dark-2);
   margin: 0;
-  white-space: pre-line;
+}
+
+.image-text-text h1,
+.image-text-text h2,
+.image-text-text h3,
+.image-text-text h4,
+.image-text-text h5,
+.image-text-text h6 {
+  color: var(--dark);
+  font-weight: 600;
+  margin-bottom: 16px;
+  margin-top: 24px;
+  line-height: var(--_line-height---lh-120);
+}
+
+.image-text-text h1:first-child,
+.image-text-text h2:first-child,
+.image-text-text h3:first-child,
+.image-text-text h4:first-child,
+.image-text-text h5:first-child,
+.image-text-text h6:first-child {
+  margin-top: 0;
+}
+
+.image-text-text h1 { font-size: var(--_font-size---fz-32); }
+.image-text-text h2 { font-size: var(--_font-size---fz-28); }
+.image-text-text h3 { font-size: var(--_font-size---fz-24); }
+.image-text-text h4 { font-size: var(--_font-size---fz-20); }
+.image-text-text h5 { font-size: var(--_font-size---fz-18); }
+.image-text-text h6 { font-size: var(--_font-size---fz-16); }
+
+.image-text-text p {
+  margin-bottom: 16px;
+  line-height: var(--_line-height---lh-150);
+}
+
+.image-text-text p:last-child {
+  margin-bottom: 0;
+}
+
+.image-text-text ul,
+.image-text-text ol {
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+
+.image-text-text li {
+  margin-bottom: 8px;
+  line-height: var(--_line-height---lh-150);
+}
+
+.image-text-text li:last-child {
+  margin-bottom: 0;
+}
+
+.image-text-text strong,
+.image-text-text b {
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.image-text-text em,
+.image-text-text i {
+  font-style: italic;
+}
+
+.image-text-text a {
+  color: var(--dark);
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+}
+
+.image-text-text a:hover {
+  opacity: 0.7;
+}
+
+.image-text-text blockquote {
+  border-left: 3px solid var(--dark);
+  padding-left: 20px;
+  margin: 20px 0;
+  font-style: italic;
+  color: var(--dark-2);
+}
+
+.image-text-text code {
+  background-color: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 14px;
 }
 
 /* Tablet Styles */
@@ -97,12 +210,24 @@
     order: -1;
   }
 
+  .image-text-centered-title {
+    font-size: var(--_font-size---fz-32);
+  }
+
   .image-text-title {
+    font-size: var(--_font-size---fz-32);
+  }
+
+  .image-text-title-mirror {
     font-size: var(--_font-size---fz-32);
   }
 
   .image-text-title-wrap {
     margin-bottom: 20px;
+  }
+
+  .image-text-centered-title-wrap {
+    margin-bottom: 30px;
   }
 }
 
@@ -118,18 +243,41 @@
     grid-row-gap: 20px;
   }
 
+  .image-text-centered-title {
+    font-size: var(--_font-size---fz-24);
+  }
+
   .image-text-title {
+    font-size: var(--_font-size---fz-24);
+  }
+
+  .image-text-title-mirror {
     font-size: var(--_font-size---fz-24);
   }
 
   .image-text-text {
     font-size: var(--_font-size---fz-14);
   }
+
+  .image-text-text h1 { font-size: var(--_font-size---fz-28); }
+  .image-text-text h2 { font-size: var(--_font-size---fz-24); }
+  .image-text-text h3 { font-size: var(--_font-size---fz-20); }
+  .image-text-text h4 { font-size: var(--_font-size---fz-18); }
+  .image-text-text h5 { font-size: var(--_font-size---fz-16); }
+  .image-text-text h6 { font-size: var(--_font-size---fz-14); }
 }
 
 /* Small Mobile Styles */
 @media screen and (max-width: 479px) {
+  .image-text-centered-title {
+    font-size: var(--_font-size---fz-20);
+  }
+
   .image-text-title {
+    font-size: var(--_font-size---fz-20);
+  }
+
+  .image-text-title-mirror {
     font-size: var(--_font-size---fz-20);
   }
 }

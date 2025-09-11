@@ -26,20 +26,20 @@ export default function Hero() {
             <div className="hero-about-content">
               <div className="hero-about-thumb-layout">
                 <img
-                  src="images/h-thumb-1.webp"
+                  src="images/cmf/beton.jpg"
                   loading="lazy"
                   id="w-node-d10dc31e-9d01-79ed-1a57-d041684826d6-4ce1e319"
                   alt="image"
                   className="hero-about-thumb"
                 />
                 <img
-                  src="images/h-thumb-2.webp"
+                  src="images/cmf/stones.jpg"
                   loading="lazy"
                   alt="image"
                   className="hero-about-thumb"
                 />
                 <img
-                  src="images/h-thumb-3.webp"
+                  src="images/cmf/stones2.jpg"
                   loading="lazy"
                   alt="image"
                   className="hero-about-thumb"
