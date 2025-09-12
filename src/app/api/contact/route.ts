@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const TELEGRAM_BOT_TOKEN = '8469285612:AAFlFmeFGytv3WhVaRESznODxfl_lwyBdxo';
-const TELEGRAM_CHAT_ID = '353105629';
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
 interface ContactFormData {
   fullname: string;
