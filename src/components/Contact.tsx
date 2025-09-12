@@ -1,8 +1,49 @@
 "use client";
 
+import { useState } from "react";
 import "./styles/Contact.css";
 
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      fullname: formData.get('fullname') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phone') as string,
+      telegram: formData.get('telegram') as string,
+      tariff: formData.get('tariff') as string,
+      expectations: formData.get('expectations') as string || '',
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <div id="contact" className="contact-section">
       <div className="section-spacing">
@@ -40,6 +81,7 @@ export default function Contact() {
                   data-name="Email Form"
                   method="post"
                   className="contact-us"
+                  onSubmit={handleSubmit}
                 >
                   <div className="contact-input-wrap">
                     <label htmlFor="fullname" className="contact-input-label">
@@ -154,7 +196,7 @@ export default function Contact() {
                           className="contact-radio-input"
                           required
                         />
-                        <span className="contact-radio-label">Ще не вирішила / вирішив</span>
+                        <span className="contact-radio-label">Хочу консультацію</span>
                       </label>
                     </div>
                   </div>
@@ -175,9 +217,10 @@ export default function Contact() {
                     <button
                       type="submit"
                       className="primary-btn contact-btn-wrap"
+                      disabled={isSubmitting}
                     >
                       <div className="btn-inner">
-                        <div>Записатись</div>
+                        <div>{isSubmitting ? 'Відправка...' : 'Записатись'}</div>
                         <div className="btn-icon-wrap contact">
                           <div className="btn-icon contact w-embed">
                             <svg
@@ -213,10 +256,10 @@ export default function Contact() {
                     </button>
                   </div>
                 </form>
-                <div className="success-message w-form-done">
+                <div className={`success-message w-form-done ${submitStatus === 'success' ? 'w-form-done-visible' : ''}`}>
                   <div>Дякуємо! Ваше повідомлення було отримано!</div>
                 </div>
-                <div className="error-message w-form-fail">
+                <div className={`error-message w-form-fail ${submitStatus === 'error' ? 'w-form-fail-visible' : ''}`}>
                   <div>
                     Упс! Щось пішло не так при надсиланні форми.
                   </div>

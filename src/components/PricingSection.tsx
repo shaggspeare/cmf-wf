@@ -32,8 +32,7 @@ export default function PricingSection() {
         "Доступ до лекцій 3 місяці",
         "Додаткові матеріали (сайти для дизайнерів, література…)",
         "Сертифікат о проходженні курсу"
-      ],
-      isPopular: true
+      ]
     },
     {
       name: "PREMIUM",
@@ -50,7 +49,8 @@ export default function PricingSection() {
         "Список міжнародних дизайн виставок",
         "Сертифікат о проходженні курсу"
       ],
-      isPremium: true
+      isPremium: true,
+      isPopular: true
     },
     {
       name: "VIP",
@@ -73,7 +73,7 @@ export default function PricingSection() {
   ];
 
   return (
-    <div className="pricing-section">
+    <div id="pricing" className="pricing-section">
       <div className="section-spacing">
         <div className="container">
           <div className="pricing-centered-title-wrap">
@@ -111,7 +111,7 @@ export default function PricingSection() {
                 <div className="pricing-btn-wrap">
                   <a href="#contact" className="primary-btn w-inline-block">
                     <div className="btn-inner">
-                      <div>Залишити заявку</div>
+                      <div>Купити</div>
                       <div className="btn-icon-wrap">
                         <div className="btn-icon w-embed">
                           <svg

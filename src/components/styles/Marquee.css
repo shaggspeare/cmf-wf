@@ -37,10 +37,6 @@
   }
 }
 
-/* Pause animation on hover */
-.marquee-section:hover .marquee-content {
-  animation-play-state: paused;
-}
 
 /* Tablet Styles */
 @media screen and (max-width: 991px) {
