@@ -136,13 +136,11 @@
 }
 
 .contact-radio-item:hover {
-  border-color: var(--color-1);
-  background-color: rgba(0, 0, 0, 0.02);
+  border-color: #df5f15;
 }
 
 .contact-radio-item:has(.contact-radio-input:checked) {
-  border-color: var(--color-1);
-  background-color: rgba(0, 0, 0, 0.05);
+  border-color: #df5f15;
 }
 
 .contact-radio-input {
@@ -159,7 +157,7 @@
 }
 
 .contact-radio-input:checked {
-  border-color: var(--color-1);
+  border-color: #df5f15;
 }
 
 .contact-radio-input:checked::after {
@@ -171,7 +169,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--color-1);
+  background-color: #df5f15;
 }
 
 .contact-radio-label {

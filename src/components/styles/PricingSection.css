@@ -114,9 +114,9 @@
   font-weight: 500;
 }
 
-.pricing-card.is-popular .pricing-original-price {
-  color: rgba(255, 255, 255, 0.6);
-}
+/*.pricing-card.is-popular .pricing-original-price {*/
+/*  color: rgba(255, 255, 255, 0.6);*/
+/*}*/
 
 .pricing-card.is-premium {
   background-color: #f8f6ff !important;
