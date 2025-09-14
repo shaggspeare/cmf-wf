@@ -23,6 +23,8 @@ export default function Contact() {
     };
 
     try {
+      console.log('Submitting form with data:', data);
+
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -31,10 +33,17 @@ export default function Contact() {
         body: JSON.stringify(data),
       });
 
+      console.log('Response status:', response.status);
+
+      const responseData = await response.json();
+      console.log('Response data:', responseData);
+
       if (response.ok) {
+        console.log('Form submitted successfully');
         setSubmitStatus('success');
         (e.target as HTMLFormElement).reset();
       } else {
+        console.error('Form submission failed:', responseData);
         setSubmitStatus('error');
       }
     } catch (error) {
