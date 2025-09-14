@@ -32,7 +32,7 @@ export default function Hero() {
             <div className="hero-about-content">
               <div className="hero-about-thumb-layout">
                 <img
-                  src="images/cmf/beton.jpg"
+                  src="images/cmf/japandibedsidetable.png"
                   loading="lazy"
                   id="w-node-d10dc31e-9d01-79ed-1a57-d041684826d6-4ce1e319"
                   alt="image"
@@ -45,7 +45,7 @@ export default function Hero() {
                   className="hero-about-thumb"
                 />
                 <img
-                  src="images/cmf/stones2.JPG"
+                  src="images/cmf/cube.JPG"
                   loading="lazy"
                   alt="image"
                   className="hero-about-thumb"
@@ -61,6 +61,14 @@ export default function Hero() {
                   <li>Морфологію</li>
                   <li>CMF Design (колір, матеріал, текстура)</li>
                 </ul>
+                <p className="hero-about-text">
+                  <strong>CMF Design</strong> - це спеціалізована область
+                  дизайну, в якій основна увага приділяється трьом елементам
+                  поверхні - кольору, матеріалу та обробки (тобто текстурі), щоб
+                  підтримувати як функціональні, так і емоційні характеристики
+                  продукту.
+                </p>
+                <br />
                 <p className="hero-about-text">
                   Ви пройдете повний шлях — від аналізу завдання до створення
                   скетчів, хто володіє програмами 3D-модель з продуманою
@@ -111,9 +119,9 @@ export default function Hero() {
               <div className="hero-social-block">
                 <div className="hero-social-item">
                   <span className="hero-social-label">Instagram:</span>
-                  <a 
-                    href="https://instagram.com/valeria_vari_design" 
-                    target="_blank" 
+                  <a
+                    href="https://instagram.com/valeria_vari_design"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="hero-social-link"
                   >
@@ -122,9 +130,9 @@ export default function Hero() {
                 </div>
                 <div className="hero-social-item">
                   <span className="hero-social-label">WhatsApp/Telegram:</span>
-                  <a 
-                    href="https://wa.me/393278445410" 
-                    target="_blank" 
+                  <a
+                    href="https://wa.me/393278445410"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="hero-social-link"
                   >
@@ -144,7 +152,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <ShapeBackground 
+      <ShapeBackground
         variant="hero"
         imageSrc="images/c-shape-2.svg"
         imageAlt="c-shape-2"

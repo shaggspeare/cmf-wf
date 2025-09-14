@@ -16,7 +16,7 @@ export default function ForWhoSection() {
       <ImageTextSection
         title="Для кого курс?"
         text={forWhoText}
-        imageSrc="/images/cmf/salone_exhibition.jpg"
+        imageSrc="/images/cmf/striped-interior.JPG"
         imageAlt="Презентація курсу"
         imageOnRight={false}
         className="for-who-section"

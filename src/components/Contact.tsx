@@ -66,7 +66,7 @@ export default function Contact() {
               </div>
               <div className="contact-image-wrap">
                 <img
-                  src="images/cmf/course-cover.jpg"
+                  src="/images/cmf/contact-moodboard.PNG"
                   loading="lazy"
                   alt="CMF Design Course Cover"
                   className="contact-image"

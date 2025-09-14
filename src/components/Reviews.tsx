@@ -55,7 +55,7 @@ export default function Reviews() {
               <div className="reviews-item-info-wrap">
                 <div className="reviews-item-author-wrap">
                   <img
-                    src="images/author-1.webp"
+                    src="/images/cmf/review-1.PNG"
                     loading="lazy"
                     alt="author-1"
                     className="reviews-item-author"
@@ -98,7 +98,7 @@ export default function Reviews() {
               <div className="reviews-item-info-wrap">
                 <div className="reviews-item-author-wrap">
                   <img
-                    src="images/author-2.webp"
+                    src="/images/cmf/review-2.jpg"
                     loading="lazy"
                     alt="author-2"
                     className="reviews-item-author"
@@ -124,7 +124,7 @@ export default function Reviews() {
               <div className="reviews-item-info-wrap">
                 <div className="reviews-item-author-wrap">
                   <img
-                    src="images/author-3.webp"
+                    src="/images/cmf/review-3.jpg"
                     loading="lazy"
                     alt="author-3"
                     className="reviews-item-author"
@@ -148,7 +148,7 @@ export default function Reviews() {
               <div className="reviews-item-info-wrap">
                 <div className="reviews-item-author-wrap">
                   <img
-                    src="images/author-4.webp"
+                    src="/images/cmf/review-4.jpg"
                     loading="lazy"
                     alt="author-4"
                     className="reviews-item-author"

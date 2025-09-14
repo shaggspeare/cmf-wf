@@ -52,7 +52,7 @@ export default function Program() {
             <div className="program-item">
               <div className="program-item-icon-wrap">
                 <img
-                  src="/images/cmf/hero.jpg"
+                  src="/images/cmf/ring.JPG"
                   loading="lazy"
                   alt="Фінал курсу"
                   className="program-item-icon"
@@ -85,7 +85,7 @@ export default function Program() {
             <div className="program-item">
               <div className="program-item-icon-wrap">
                 <img
-                  src="/images/cmf/chair1.JPG"
+                  src="/images/cmf/chair2.png"
                   loading="lazy"
                   alt="CMF Design"
                   className="program-item-icon"
@@ -115,7 +115,7 @@ export default function Program() {
             <div className="program-item">
               <div className="program-item-icon-wrap">
                 <img
-                  src="/images/cmf/chair2.JPG"
+                  src="/images/cmf/beton.jpg"
                   loading="lazy"
                   alt="Морфологія в дизайні"
                   className="program-item-icon"

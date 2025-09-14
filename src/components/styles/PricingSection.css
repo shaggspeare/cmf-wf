@@ -129,13 +129,13 @@
 }
 
 .pricing-card.is-vip {
-  background-color: #6b46c1 !important;
-  border-color: #6b46c1 !important;
+  background-color: #DF5F15FF !important;
+  border-color: #DF5F15FF !important;
   color: var(--white) !important;
 }
 
 .pricing-card.is-vip:hover {
-  box-shadow: 8px 8px 0 #553c9a !important;
+  box-shadow: 8px 8px 0 #DF5F15FF !important;
 }
 
 .pricing-card.is-vip .pricing-original-price {
@@ -144,13 +144,13 @@
 
 .pricing-card.is-vip button.primary-btn {
   background-color: var(--white);
-  color: #6b46c1;
+  color: #DF5F15FF;
   border-color: var(--white);
 }
 
 .pricing-card.is-vip button.primary-btn:hover:not(:disabled) {
   background-color: #e0d9ff;
-  color: #553c9a;
+  color: #DF5F15FF;
   border-color: #e0d9ff;
 }
 

@@ -15,7 +15,7 @@ export default function ResultsSection() {
       <ImageTextSection
         title="Результат після курсу?"
         text={resultsText}
-        imageSrc="/images/cmf/vases.jpg"
+        imageSrc="/images/cmf/cmf-strategy-lamp.png"
         imageAlt="Готові дизайнерські об'єкти"
         imageOnRight={false}
         className="results-section"
