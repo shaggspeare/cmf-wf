@@ -142,13 +142,13 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
-.pricing-card.is-vip .primary-btn {
+.pricing-card.is-vip button.primary-btn {
   background-color: var(--white);
   color: #6b46c1;
   border-color: var(--white);
 }
 
-.pricing-card.is-vip .primary-btn:hover {
+.pricing-card.is-vip button.primary-btn:hover:not(:disabled) {
   background-color: #e0d9ff;
   color: #553c9a;
   border-color: #e0d9ff;
@@ -195,13 +195,44 @@
   justify-content: center;
 }
 
-.pricing-card.is-popular .primary-btn {
+.pricing-card button.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border: 1px solid var(--dark);
+  background-color: var(--dark);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 112%;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  border-radius: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.pricing-card button.primary-btn:hover:not(:disabled) {
+  background-color: var(--dark-2);
+  border-color: var(--dark-2);
+}
+
+.pricing-card button.primary-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.pricing-card.is-popular button.primary-btn {
   background-color: var(--white);
   color: var(--dark);
   border-color: var(--white);
 }
 
-.pricing-card.is-popular .primary-btn:hover {
+.pricing-card.is-popular button.primary-btn:hover:not(:disabled) {
   background-color: var(--dark-2);
   color: var(--white);
   border-color: var(--dark-2);
