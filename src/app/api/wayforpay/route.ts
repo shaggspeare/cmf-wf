@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
     const orderDate = Math.floor(Date.now() / 1000);
 
     // Get the base URL for callbacks
-    const host = request.headers.get('host') || 'localhost:3001';
+    const host = request.headers.get('host') || 'localhost:3000';
     const protocol = host.includes('localhost') ? 'http' : 'https';
     const baseUrl = `${protocol}://${host}`;
 
@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
       clientEmail: userEmail || 'customer@example.com',
       clientPhone: userPhone || '+380000000000',
       language: 'UA',
-      returnUrl: `${baseUrl}/payment/success`,
+      returnUrl: `${baseUrl}/api/wayforpay/return`,
       serviceUrl: `${baseUrl}/api/wayforpay/callback`,
       // Additional URLs for different payment outcomes
       merchantTransactionSecureType: 'AUTO',

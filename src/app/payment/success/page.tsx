@@ -12,14 +12,28 @@ export default function PaymentSuccess() {
     
     // Only check URL parameters after component mounts on client
     if (typeof window !== 'undefined') {
-      const urlParams = new URLSearchParams(window.location.search);
-      const transactionStatus = urlParams.get('transactionStatus');
-      const reasonCode = urlParams.get('reasonCode');
-      
-      if (transactionStatus === 'Declined' || reasonCode === '1100' || reasonCode === '1101') {
-        // Payment failed - redirect to failure page
-        window.location.href = '/payment/failure';
-        return;
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const transactionStatus = urlParams.get('transactionStatus');
+        const reasonCode = urlParams.get('reasonCode');
+        
+        console.log('Success page params:', { transactionStatus, reasonCode });
+        
+        // If we detect failure parameters, redirect to failure page
+        // reasonCode 1100 = Success, reasonCode 1101+ = Various failure reasons  
+        if (transactionStatus === 'Declined' || (reasonCode && reasonCode !== '1100' && parseInt(reasonCode) >= 1101)) {
+          console.log('Redirecting to failure page');
+          window.location.href = '/payment/failure';
+          return;
+        }
+        
+        // Log successful case
+        if (transactionStatus === 'Approved' || reasonCode === '1100' || !transactionStatus) {
+          console.log('Payment success confirmed');
+        }
+      } catch (error) {
+        console.error('Error checking payment status:', error);
+        // On error, assume success since we're already on success page
       }
     }
   }, []);
