@@ -69,7 +69,7 @@ export default function PricingSection() {
   const pricingPlans: PricingPlan[] = [
     {
       name: "MINI",
-      price: "1 UAH",
+      price: "4200 UAH",
       features: [
         "Записи відео",
         "Завдання без зворотного фідбеку",
@@ -78,7 +78,7 @@ export default function PricingSection() {
     },
     {
       name: "ACTIVE STANDART",
-      price: "1 UAH",
+      price: "7200 UAH",
       originalPrice: "8000 UAH",
       features: [
         "Онлайн живі лекції по розкладу",
@@ -91,7 +91,7 @@ export default function PricingSection() {
     },
     {
       name: "PREMIUM",
-      price: "1 UAH",
+      price: "12500 UAH",
       originalPrice: "13500 UAH",
       features: [
         "Онлайн живі лекції по розкладу",
@@ -110,7 +110,7 @@ export default function PricingSection() {
     {
       name: "VIP",
       price: "1 UAH",
-      originalPrice: "18500 UAH",
+      originalPrice: "16500 UAH",
       features: [
         "Старт курсу і заняття у зручний для вас час один на один",
         "Живі лекції",
@@ -164,14 +164,13 @@ export default function PricingSection() {
                 </div>
                 
                 <div className="pricing-btn-wrap">
-                  <button 
-                    onClick={() => handlePayment(plan)}
-                    disabled={loadingPlan === plan.name}
+                  <a
+                    href="#contact"
                     className="primary-btn w-inline-block"
                   >
                     <div className="btn-inner">
                       <div>
-                        {loadingPlan === plan.name ? 'Обробка...' : 'Купити'}
+                        Записатись
                       </div>
                       <div className="btn-icon-wrap">
                         <div className="btn-icon w-embed">
@@ -205,7 +204,7 @@ export default function PricingSection() {
                       </div>
                     </div>
                     <div className="btn-shape"></div>
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}

@@ -170,6 +170,12 @@
   display: grid;
 }
 
+.hero-about-thumb {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
 .hero-shape-wrap {
   z-index: -1;
   pointer-events: none;
@@ -232,7 +238,6 @@
 
   .hero-about-thumb {
     object-fit: cover;
-    height: 70%;
   }
 
   .hero-about-title {
@@ -251,6 +256,8 @@
   .hero-about-thumb-layout {
     width: 69%;
     margin-bottom: 20px;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
   }
 
   .hero-date-badge-wrap {
@@ -313,6 +320,8 @@
 
   .hero-about-thumb-layout {
     width: 80%;
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
   }
 
   .hero-date-badge-wrap {
@@ -368,6 +377,8 @@
 
   .hero-about-thumb-layout {
     width: 100%;
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
   }
 
   .hero-date-badge-wrap {

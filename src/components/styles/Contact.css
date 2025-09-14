@@ -188,6 +188,27 @@
   color: var(--dark);
   letter-spacing: var(--_letter-spacing---ls-1);
   margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-pricing-link {
+  font-size: var(--_font-size---fz-14);
+  font-weight: 500;
+  color: var(--dark);
+  text-decoration: underline;
+  margin-left: 12px;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.contact-pricing-link:hover {
+  background-color: var(--dark);
+  color: var(--white);
+  text-decoration: none;
+  transform: translateY(-1px);
 }
 
 .contact-input,

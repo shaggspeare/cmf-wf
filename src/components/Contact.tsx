@@ -146,6 +146,7 @@ export default function Contact() {
                   <div className="contact-radio-wrap">
                     <label className="contact-input-label">
                       Який з тарифів тебе зацікавив?*
+                      <a href="#pricing" className="contact-pricing-link">Тарифи</a>
                     </label>
                     <div className="contact-radio-group">
                       <label className="contact-radio-item">
