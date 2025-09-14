@@ -109,8 +109,8 @@ export default function PricingSection() {
     },
     {
       name: "VIP",
-      price: "1 UAH",
-      originalPrice: "16500 UAH",
+      price: "16500 UAH",
+      originalPrice: "18500 UAH",
       features: [
         "Старт курсу і заняття у зручний для вас час один на один",
         "Живі лекції",
