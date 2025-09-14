@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+const TELEGRAM_CHAT_IDS = process.env.TELEGRAM_CHAT_IDS?.split(',').map(id => id.trim()) || [];
 
 interface ContactFormData {
   fullname: string;
@@ -43,25 +43,31 @@ ${formData.expectations ? `💭 *Очікування від курсу:*\n${esc
 📅 Час подачі: ${new Date().toLocaleString('uk-UA', { timeZone: 'Europe/Kiev' })}
     `.trim();
 
+    // Send message to all chat IDs
     const telegramUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
-    
-    const telegramResponse = await fetch(telegramUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        chat_id: TELEGRAM_CHAT_ID,
-        text: message,
-        parse_mode: 'Markdown',
-      }),
+    const telegramPromises = TELEGRAM_CHAT_IDS.map(async (chatId) => {
+      const telegramResponse = await fetch(telegramUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: message,
+          parse_mode: 'Markdown',
+        }),
+      });
+
+      if (!telegramResponse.ok) {
+        const errorData = await telegramResponse.json();
+        console.error(`Telegram API error for chat ${chatId}:`, errorData);
+        throw new Error(`Failed to send message to Telegram chat ${chatId}`);
+      }
+
+      return telegramResponse;
     });
 
-    if (!telegramResponse.ok) {
-      const errorData = await telegramResponse.json();
-      console.error('Telegram API error:', errorData);
-      throw new Error('Failed to send message to Telegram');
-    }
+    await Promise.all(telegramPromises);
 
     return NextResponse.json({ success: true, message: 'Form submitted successfully' });
     
