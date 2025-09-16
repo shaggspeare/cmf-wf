@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import "../payment/payment.css";
 import "../../components/styles/Contact.css";
@@ -10,7 +10,7 @@ interface PricingPlan {
   price: string;
 }
 
-export default function Checkout() {
+function CheckoutContent() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [selectedPlan, setSelectedPlan] = useState<PricingPlan | null>(null);
@@ -266,5 +266,29 @@ export default function Checkout() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function Checkout() {
+  return (
+    <Suspense fallback={
+      <div className="payment-section">
+        <div className="section-spacing">
+          <div className="container">
+            <div className="payment-content">
+              <div style={{
+                fontSize: 'var(--_font-size---fz-20)',
+                textAlign: 'center',
+                color: 'var(--dark)'
+              }}>
+                Завантаження...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    }>
+      <CheckoutContent />
+    </Suspense>
   );
 }
