@@ -83,9 +83,9 @@ export default function Hero() {
                 </p>
               </div>
               <div className="hero-about-btn-wrap">
-                <a href="#contact" className="primary-btn w-inline-block">
+                <a href="#pricing" className="primary-btn w-inline-block">
                   <div className="btn-inner">
-                    <div>Записатись на курс</div>
+                    <div>Купити курс</div>
                     <div className="btn-icon-wrap">
                       <div className="btn-icon w-embed">
                         <svg

@@ -69,7 +69,8 @@ export default function PricingSection() {
   const pricingPlans: PricingPlan[] = [
     {
       name: "MINI",
-      price: "4200 UAH",
+      price: "1 UAH",
+      // price: "4200 UAH",
       features: [
         "Записи відео",
         "Завдання без зворотного фідбеку",
@@ -78,7 +79,8 @@ export default function PricingSection() {
     },
     {
       name: "ACTIVE STANDART",
-      price: "7200 UAH",
+      // price: "7200 UAH",
+      price: "1 UAH",
       originalPrice: "8000 UAH",
       features: [
         "Онлайн живі лекції по розкладу",
@@ -91,7 +93,8 @@ export default function PricingSection() {
     },
     {
       name: "PREMIUM",
-      price: "12500 UAH",
+      // price: "12500 UAH",
+      price: "1 UAH",
       originalPrice: "13500 UAH",
       features: [
         "Онлайн живі лекції по розкладу",
@@ -109,7 +112,8 @@ export default function PricingSection() {
     },
     {
       name: "VIP",
-      price: "16500 UAH",
+      // price: "16500 UAH",
+      price: "1 UAH",
       originalPrice: "18500 UAH",
       features: [
         "Старт курсу і заняття у зручний для вас час один на один",
@@ -164,13 +168,14 @@ export default function PricingSection() {
                 </div>
                 
                 <div className="pricing-btn-wrap">
-                  <a
-                    href="#contact"
+                  <button
+                    onClick={() => handlePayment(plan)}
+                    disabled={loadingPlan === plan.name}
                     className="primary-btn w-inline-block"
                   >
                     <div className="btn-inner">
                       <div>
-                        Записатись
+                        {loadingPlan === plan.name ? 'Обробка...' : 'Купити'}
                       </div>
                       <div className="btn-icon-wrap">
                         <div className="btn-icon w-embed">
@@ -204,7 +209,7 @@ export default function PricingSection() {
                       </div>
                     </div>
                     <div className="btn-shape"></div>
-                  </a>
+                  </button>
                 </div>
               </div>
             ))}

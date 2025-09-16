@@ -143,11 +143,11 @@ export default function Navigation() {
             <div className="nav-right">
               <div className="hide-mobile">
                 <a
-                  href="#contact"
+                  href="#pricing"
                   className="primary-btn-dark w-inline-block"
                 >
                   <div className="btn-inner">
-                    <div>Записатись</div>
+                    <div>Купити курс</div>
                     <div className="btn-icon-wrap">
                       <div className="btn-icon w-embed">
                         <svg
