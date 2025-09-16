@@ -5,9 +5,48 @@ export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const transactionStatus = searchParams.get('transactionStatus');
   const reasonCode = searchParams.get('reasonCode');
-  
-  console.log('WayForPay GET return:', { transactionStatus, reasonCode });
-  
+  const userId = searchParams.get('userId');
+  const orderReference = searchParams.get('orderReference');
+
+  console.log('WayForPay GET return:', { transactionStatus, reasonCode, userId });
+
+  // Send Telegram notification if we have user data
+  if (userId && orderReference && transactionStatus && reasonCode) {
+    try {
+      // Get user data
+      const { userStorage } = await import('../../../../lib/userStorage');
+      const userData = userStorage[userId];
+
+      if (userData) {
+        // Send Telegram notification
+        await fetch(new URL('/api/telegram-notify', request.url), {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            userId,
+            fullname: userData.fullname,
+            email: userData.email,
+            phone: userData.phone,
+            telegram: userData.telegram,
+            planName: userData.planName,
+            planPrice: userData.planPrice,
+            orderReference,
+            transactionStatus,
+            reasonCode,
+            expectations: userData.expectations
+          })
+        });
+
+        // Update user status
+        userData.status = transactionStatus === 'Approved' || reasonCode === '1100' || reasonCode === '1134' ? 'completed' : 'failed';
+        userData.updatedAt = new Date().toISOString();
+        userData.orderReference = orderReference;
+      }
+    } catch (error) {
+      console.error('Error sending Telegram notification:', error);
+    }
+  }
+
   // Determine redirect destination based on WayForPay response codes
   // reasonCode 1100 = Success
   // reasonCode 1134 = Transaction in progress (Pending) - should be success
@@ -19,13 +58,13 @@ export async function GET(request: NextRequest) {
     });
     return NextResponse.redirect(failureUrl, { status: 302 });
   }
-  
+
   // Success case
   const successUrl = new URL('/payment/success', request.url);
   searchParams.forEach((value, key) => {
     successUrl.searchParams.set(key, value);
   });
-  
+
   return NextResponse.redirect(successUrl, { status: 302 });
 }
 
@@ -33,19 +72,61 @@ export async function POST(request: NextRequest) {
   try {
     // Handle POST requests from WayForPay
     const formData = await request.formData();
-    
+
     // Extract WayForPay response data
     const transactionStatus = formData.get('transactionStatus') as string;
     const reasonCode = formData.get('reasonCode') as string;
     const orderReference = formData.get('orderReference') as string;
     const amount = formData.get('amount') as string;
-    
+
+    // Get userId from URL parameters
+    const searchParams = new URL(request.url).searchParams;
+    const userId = searchParams.get('userId');
+
     console.log('WayForPay POST return:', {
       transactionStatus,
       reasonCode,
       orderReference,
-      amount
+      amount,
+      userId
     });
+
+    // Send Telegram notification if we have user data
+    if (userId && orderReference && transactionStatus && reasonCode) {
+      try {
+        // Get user data
+        const { userStorage } = await import('../../../../lib/userStorage');
+        const userData = userStorage[userId];
+
+        if (userData) {
+          // Send Telegram notification
+          await fetch(new URL('/api/telegram-notify', request.url), {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              userId,
+              fullname: userData.fullname,
+              email: userData.email,
+              phone: userData.phone,
+              telegram: userData.telegram,
+              planName: userData.planName,
+              planPrice: userData.planPrice,
+              orderReference,
+              transactionStatus,
+              reasonCode,
+              expectations: userData.expectations
+            })
+          });
+
+          // Update user status
+          userData.status = transactionStatus === 'Approved' || reasonCode === '1100' || reasonCode === '1134' ? 'completed' : 'failed';
+          userData.updatedAt = new Date().toISOString();
+          userData.orderReference = orderReference;
+        }
+      } catch (error) {
+        console.error('Error sending Telegram notification:', error);
+      }
+    }
     
     // Build redirect URL with parameters
     const params = new URLSearchParams();

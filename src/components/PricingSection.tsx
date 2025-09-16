@@ -1,7 +1,7 @@
 'use client';
 
-import './styles/PricingSection.css';
-import { useState } from 'react';
+import "./styles/PricingSection.css";
+import { useState } from "react";
 
 interface PricingPlan {
   name: string;
@@ -20,56 +20,14 @@ export default function PricingSection() {
     return parseInt(priceString.replace(/[^\d]/g, ''));
   };
 
-  const handlePayment = async (plan: PricingPlan) => {
-    setLoadingPlan(plan.name);
-    
-    try {
-      const response = await fetch('/api/wayforpay', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          planName: plan.name,
-          price: extractPrice(plan.price),
-          currency: 'UAH'
-        }),
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        // Create and submit form to WayForPay
-        const form = document.createElement('form');
-        form.method = 'POST';
-        form.action = data.paymentUrl;
-        form.style.display = 'none';
-
-        // Add all payment data as hidden inputs
-        Object.entries(data.paymentData).forEach(([key, value]) => {
-          const input = document.createElement('input');
-          input.type = 'hidden';
-          input.name = key;
-          input.value = Array.isArray(value) ? value.join(',') : String(value);
-          form.appendChild(input);
-        });
-
-        document.body.appendChild(form);
-        form.submit();
-      } else {
-        alert('Помилка при створенні платежу. Спробуйте пізніше.');
-      }
-    } catch (error) {
-      console.error('Payment error:', error);
-      alert('Помилка при створенні платежу. Спробуйте пізніше.');
-    } finally {
-      setLoadingPlan(null);
-    }
+  const handleBuyClick = (plan: PricingPlan) => {
+    // Redirect to checkout page with plan information
+    window.location.href = `/checkout?plan=${encodeURIComponent(plan.name)}&price=${encodeURIComponent(plan.price)}`;
   };
   const pricingPlans: PricingPlan[] = [
     {
       name: "MINI",
-      price: "2 UAH",
+      price: "1 UAH",
       // price: "4200 UAH",
       features: [
         "Записи відео",
@@ -80,7 +38,7 @@ export default function PricingSection() {
     {
       name: "ACTIVE STANDART",
       // price: "7200 UAH",
-      price: "1 UAH",
+      price: "2 UAH",
       originalPrice: "8000 UAH",
       features: [
         "Онлайн живі лекції по розкладу",
@@ -94,7 +52,7 @@ export default function PricingSection() {
     {
       name: "PREMIUM",
       // price: "12500 UAH",
-      price: "1 UAH",
+      price: "3 UAH",
       originalPrice: "13500 UAH",
       features: [
         "Онлайн живі лекції по розкладу",
@@ -113,7 +71,7 @@ export default function PricingSection() {
     {
       name: "VIP",
       // price: "16500 UAH",
-      price: "1 UAH",
+      price: "4 UAH",
       originalPrice: "18500 UAH",
       features: [
         "Старт курсу і заняття у зручний для вас час один на один",
@@ -169,13 +127,12 @@ export default function PricingSection() {
                 
                 <div className="pricing-btn-wrap">
                   <button
-                    onClick={() => handlePayment(plan)}
-                    disabled={loadingPlan === plan.name}
+                    onClick={() => handleBuyClick(plan)}
                     className="primary-btn w-inline-block"
                   >
                     <div className="btn-inner">
                       <div>
-                        {loadingPlan === plan.name ? 'Обробка...' : 'Купити'}
+                        Купити
                       </div>
                       <div className="btn-icon-wrap">
                         <div className="btn-icon w-embed">
