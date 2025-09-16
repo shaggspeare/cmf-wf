@@ -1,5 +1,6 @@
 import "./styles/Hero.css";
 import ShapeBackground from "./ShapeBackground";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -31,24 +32,27 @@ export default function Hero() {
           <div className="hero-about-layout">
             <div className="hero-about-content">
               <div className="hero-about-thumb-layout">
-                <img
-                  src="images/cmf/japandibedsidetable.png"
-                  loading="lazy"
+                <Image
+                  src="/images/cmf/japandibedsidetable.png"
                   id="w-node-d10dc31e-9d01-79ed-1a57-d041684826d6-4ce1e319"
                   alt="image"
                   className="hero-about-thumb"
+                  width={116}
+                  height={116}
                 />
-                <img
-                  src="images/cmf/stones.JPG"
-                  loading="lazy"
+                <Image
+                  src="/images/cmf/stones.JPG"
                   alt="image"
                   className="hero-about-thumb"
+                  width={116}
+                  height={116}
                 />
-                <img
-                  src="images/cmf/cube.JPG"
-                  loading="lazy"
+                <Image
+                  src="/images/cmf/cube.JPG"
                   alt="image"
                   className="hero-about-thumb"
+                  width={116}
+                  height={116}
                 />
               </div>
               <div className="hero-about-text-wrap">
@@ -142,11 +146,12 @@ export default function Hero() {
               </div>
             </div>
             <div className="hero-about-thumb-wrap">
-              <img
-                src="images/cmf/horizontal-cmf.jpg"
-                loading="lazy"
+              <Image
+                src="/images/cmf/horizontal-cmf.jpg"
                 alt="hero-thumb"
                 className="hero-about-thumb"
+                width={535}
+                height={535}
               />
             </div>
           </div>
