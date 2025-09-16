@@ -9,8 +9,10 @@ export async function GET(request: NextRequest) {
   console.log('WayForPay GET return:', { transactionStatus, reasonCode });
   
   // Determine redirect destination based on WayForPay response codes
-  // reasonCode 1100 = Success, reasonCode 1101+ = Various failure reasons
-  if (transactionStatus === 'Declined' || (reasonCode && reasonCode !== '1100' && parseInt(reasonCode) >= 1101)) {
+  // reasonCode 1100 = Success
+  // reasonCode 1134 = Transaction in progress (Pending) - should be success
+  // reasonCode 1101+ = Various failure reasons (except 1134)
+  if (transactionStatus === 'Declined' || (reasonCode && reasonCode !== '1100' && reasonCode !== '1134' && parseInt(reasonCode) >= 1101)) {
     const failureUrl = new URL('/payment/failure', request.url);
     searchParams.forEach((value, key) => {
       failureUrl.searchParams.set(key, value);
@@ -52,9 +54,11 @@ export async function POST(request: NextRequest) {
     if (orderReference) params.set('orderReference', orderReference);
     
     // Determine redirect destination based on WayForPay response codes
-    // reasonCode 1100 = Success, reasonCode 1101+ = Various failure reasons
+    // reasonCode 1100 = Success
+    // reasonCode 1134 = Transaction in progress (Pending) - should be success
+    // reasonCode 1101+ = Various failure reasons (except 1134)
     let redirectPath = '/payment/success';
-    if (transactionStatus === 'Declined' || (reasonCode && reasonCode !== '1100' && parseInt(reasonCode) >= 1101)) {
+    if (transactionStatus === 'Declined' || (reasonCode && reasonCode !== '1100' && reasonCode !== '1134' && parseInt(reasonCode) >= 1101)) {
       redirectPath = '/payment/failure';
     }
     

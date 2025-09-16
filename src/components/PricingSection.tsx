@@ -69,7 +69,7 @@ export default function PricingSection() {
   const pricingPlans: PricingPlan[] = [
     {
       name: "MINI",
-      price: "1 UAH",
+      price: "2 UAH",
       // price: "4200 UAH",
       features: [
         "Записи відео",

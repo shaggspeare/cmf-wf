@@ -20,15 +20,17 @@ export default function PaymentSuccess() {
         console.log('Success page params:', { transactionStatus, reasonCode });
         
         // If we detect failure parameters, redirect to failure page
-        // reasonCode 1100 = Success, reasonCode 1101+ = Various failure reasons  
-        if (transactionStatus === 'Declined' || (reasonCode && reasonCode !== '1100' && parseInt(reasonCode) >= 1101)) {
+        // reasonCode 1100 = Success
+        // reasonCode 1134 = Transaction in progress (Pending) - should stay on success
+        // reasonCode 1101+ = Various failure reasons (except 1134)
+        if (transactionStatus === 'Declined' || (reasonCode && reasonCode !== '1100' && reasonCode !== '1134' && parseInt(reasonCode) >= 1101)) {
           console.log('Redirecting to failure page');
           window.location.href = '/payment/failure';
           return;
         }
         
         // Log successful case
-        if (transactionStatus === 'Approved' || reasonCode === '1100' || !transactionStatus) {
+        if (transactionStatus === 'Approved' || reasonCode === '1100' || reasonCode === '1134' || !transactionStatus) {
           console.log('Payment success confirmed');
         }
       } catch (error) {
