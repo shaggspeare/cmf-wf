@@ -1,7 +1,6 @@
-'use client';
+"use client";
 
 import "./styles/PricingSection.css";
-import { useState } from "react";
 
 interface PricingPlan {
   name: string;
@@ -14,12 +13,6 @@ interface PricingPlan {
 }
 
 export default function PricingSection() {
-  const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
-
-  const extractPrice = (priceString: string): number => {
-    return parseInt(priceString.replace(/[^\d]/g, ''));
-  };
-
   const handleBuyClick = (plan: PricingPlan) => {
     // Redirect to checkout page with plan information
     window.location.href = `/checkout?plan=${encodeURIComponent(plan.name)}&price=${encodeURIComponent(plan.price)}`;
@@ -27,18 +20,16 @@ export default function PricingSection() {
   const pricingPlans: PricingPlan[] = [
     {
       name: "MINI",
-      price: "1 UAH",
-      // price: "4200 UAH",
+      price: "4200 UAH",
       features: [
         "Записи відео",
         "Завдання без зворотного фідбеку",
-        "Доступ до лекцій 2 місяці"
-      ]
+        "Доступ до лекцій 2 місяці",
+      ],
     },
     {
       name: "ACTIVE STANDART",
-      // price: "7200 UAH",
-      price: "2 UAH",
+      price: "7200 UAH",
       originalPrice: "8000 UAH",
       features: [
         "Онлайн живі лекції по розкладу",
@@ -46,13 +37,12 @@ export default function PricingSection() {
         "Завдання та їх розбір",
         "Доступ до лекцій 3 місяці",
         "Додаткові матеріали (сайти для дизайнерів, література…)",
-        "Сертифікат о проходженні курсу"
-      ]
+        "Сертифікат о проходженні курсу",
+      ],
     },
     {
       name: "PREMIUM",
-      // price: "12500 UAH",
-      price: "3 UAH",
+      price: "12500 UAH",
       originalPrice: "13500 UAH",
       features: [
         "Онлайн живі лекції по розкладу",
@@ -63,15 +53,14 @@ export default function PricingSection() {
         "Розбір ваших особистих кейсів",
         "2 індивідуальні online консультації",
         "Список міжнародних дизайн виставок",
-        "Сертифікат о проходженні курсу"
+        "Сертифікат о проходженні курсу",
       ],
       isPremium: true,
-      isPopular: true
+      isPopular: true,
     },
     {
       name: "VIP",
-      // price: "16500 UAH",
-      price: "4 UAH",
+      price: "16500 UAH",
       originalPrice: "18500 UAH",
       features: [
         "Старт курсу і заняття у зручний для вас час один на один",
@@ -83,10 +72,10 @@ export default function PricingSection() {
         "Розбір ваших особистих кейсів",
         "2 індивідуальні online консультації",
         "Доводимо вашу ідею до прототипу",
-        "Сертифікат о проходженні курсу"
+        "Сертифікат о проходженні курсу",
       ],
-      isVip: true
-    }
+      isVip: true,
+    },
   ];
 
   return (
@@ -95,26 +84,33 @@ export default function PricingSection() {
         <div className="container">
           <div className="pricing-centered-title-wrap">
             <h2 className="pricing-centered-title">Вартість курсу</h2>
-            <p className="pricing-subtitle">Встигни, поки діє знижка на курс до 20.09.2025</p>
+            <p className="pricing-subtitle">
+              Встигни, поки діє знижка на курс до 20.09.2025
+            </p>
           </div>
-          
+
           <div className="pricing-layout">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`pricing-card ${plan.isPopular ? 'is-popular' : ''} ${plan.isPremium ? 'is-premium' : ''} ${plan.isVip ? 'is-vip' : ''}`}>
+              <div
+                key={index}
+                className={`pricing-card ${plan.isPopular ? "is-popular" : ""} ${plan.isPremium ? "is-premium" : ""} ${plan.isVip ? "is-vip" : ""}`}
+              >
                 {plan.isPopular && (
                   <div className="pricing-popular-badge">Популярний</div>
                 )}
-                
+
                 <div className="pricing-card-header">
                   <h3 className="pricing-plan-name">{plan.name}</h3>
                   <div className="pricing-price-wrap">
                     <div className="pricing-price">{plan.price}</div>
                     {plan.originalPrice && (
-                      <div className="pricing-original-price">{plan.originalPrice}</div>
+                      <div className="pricing-original-price">
+                        {plan.originalPrice}
+                      </div>
                     )}
                   </div>
                 </div>
-                
+
                 <div className="pricing-features">
                   <ul className="pricing-features-list">
                     {plan.features.map((feature, featureIndex) => (
@@ -124,16 +120,14 @@ export default function PricingSection() {
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="pricing-btn-wrap">
                   <button
                     onClick={() => handleBuyClick(plan)}
                     className="primary-btn w-inline-block"
                   >
                     <div className="btn-inner">
-                      <div>
-                        Купити
-                      </div>
+                      <div>Купити</div>
                       <div className="btn-icon-wrap">
                         <div className="btn-icon w-embed">
                           <svg
