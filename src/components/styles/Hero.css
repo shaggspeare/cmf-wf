@@ -234,10 +234,13 @@
 
   .hero-about-thumb-wrap {
     max-width: 300px;
+    display: flex;
+    flex-direction: column;
   }
 
   .hero-about-thumb {
     object-fit: cover;
+    flex-basis:  100%;
   }
 
   .hero-about-title {
