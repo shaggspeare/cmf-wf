@@ -93,7 +93,7 @@ export default function PricingSection() {
           <div className="pricing-centered-title-wrap">
             <h2 className="pricing-centered-title">Вартість курсу</h2>
             <p className="pricing-subtitle">
-              Встигни, поки діє знижка на курс до 20.09.2025
+              Встигни, поки діє знижка на курс до 07.10.2025
             </p>
           </div>
 
