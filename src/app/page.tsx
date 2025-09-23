@@ -6,7 +6,6 @@ import ApproachSection from "@/components/ApproachSection";
 import ForWhoSection from "@/components/ForWhoSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import ResultsSection from "@/components/ResultsSection";
-import DetailedProgramSection from "@/components/DetailedProgramSection";
 import Program from "@/components/Program";
 import PricingSection from "@/components/PricingSection";
 import Reviews from "@/components/Reviews";
@@ -27,7 +26,6 @@ export default function Home() {
         <BenefitsSection />
         <ResultsSection />
         <Program />
-        <DetailedProgramSection />
         <PricingSection />
         {/*<Projects />*/}
         {/*<Clients />*/}

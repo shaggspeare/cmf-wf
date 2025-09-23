@@ -78,9 +78,7 @@ export default function DetailedProgramSection({
               </div>
             </div>
             <div className="detailed-program-content">
-              <div className="detailed-program-title-wrap">
-                <h3 className="detailed-program-title-mirror">Детальна програма</h3>
-              </div>
+
               <div className="detailed-program-text-wrap">
                 <div className="detailed-program-text" dangerouslySetInnerHTML={{ __html: detailedProgramText }} />
               </div>

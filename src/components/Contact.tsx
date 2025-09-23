@@ -188,17 +188,7 @@ export default function Contact() {
                         />
                         <span className="contact-radio-label">Тариф PREMIUM</span>
                       </label>
-                      <label className="contact-radio-item">
-                        <input
-                          type="radio"
-                          name="tariff"
-                          value="vip"
-                          className="contact-radio-input"
-                          required
-                        />
-                        <span className="contact-radio-label">Тариф VIP</span>
-                      </label>
-                      <label className="contact-radio-item">
+                      <label className="contact-radio-item contact-radio-item--consultation">
                         <input
                           type="radio"
                           name="tariff"

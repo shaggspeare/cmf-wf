@@ -31,10 +31,12 @@
 
 .pricing-layout {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 24px;
   grid-row-gap: 24px;
   align-items: start;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .pricing-card {
@@ -119,7 +121,7 @@
 /*}*/
 
 .pricing-card.is-premium {
-  background-color: #f8f6ff !important;
+  background-color: #eae5ff !important;
   border-color: var(--dark) !important;
   color: var(--dark) !important;
 }

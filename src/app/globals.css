@@ -1,0 +1,40 @@
+@import url('./resets.css');
+
+/* Back button styles */
+.back-button-section {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 2px solid var(--dark);
+  background-color: var(--white);
+  color: var(--dark);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: var(--dark);
+  color: var(--white);
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--dark-2);
+}
+
+.back-button .btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.back-button .btn-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

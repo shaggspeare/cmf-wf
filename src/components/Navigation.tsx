@@ -8,7 +8,7 @@ export default function Navigation() {
           <div className="nav-layout">
             <div className="nav-left">
               <a
-                href="/public"
+                href="/"
                 aria-current="page"
                 className="logo-wrap w-inline-block w--current"
               >
@@ -143,11 +143,11 @@ export default function Navigation() {
             <div className="nav-right">
               <div className="hide-mobile">
                 <a
-                  href="#pricing"
+                  href="#contact"
                   className="primary-btn-dark w-inline-block"
                 >
                   <div className="btn-inner">
-                    <div>Купити курс</div>
+                    <div>Записатись</div>
                     <div className="btn-icon-wrap">
                       <div className="btn-icon w-embed">
                         <svg

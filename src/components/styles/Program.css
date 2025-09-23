@@ -71,6 +71,38 @@
   display: none;
 }
 
+.program-btn-wrap {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.program-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  border: 2px solid var(--dark);
+  background-color: var(--dark);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 112%;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  border-radius: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.program-btn:hover {
+  background-color: var(--dark-2);
+  border-color: var(--dark-2);
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--dark);
+}
+
 /* Tablet Styles */
 @media screen and (max-width: 991px) {
   .program-section {

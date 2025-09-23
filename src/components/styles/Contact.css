@@ -180,6 +180,40 @@
   line-height: 1.4;
 }
 
+.contact-radio-item--consultation {
+  background: linear-gradient(135deg, rgba(223, 95, 21, 0.1) 0%, rgba(223, 95, 21, 0.05) 100%);
+  border: 2px solid #ed9d6f;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(223, 95, 21, 0.15);
+}
+
+.contact-radio-item--consultation::before {
+  content: '⭐';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #df5f15;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  box-shadow: 0 2px 4px rgba(223, 95, 21, 0.3);
+}
+
+.contact-radio-item--consultation .contact-radio-label {
+  font-weight: 600;
+  color: #df5f15;
+}
+
+.contact-radio-item--consultation:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(223, 95, 21, 0.25);
+}
+
 .contact-input-label {
   font-size: var(--_font-size---fz-18);
   font-weight: 600;

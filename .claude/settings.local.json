@@ -10,7 +10,8 @@
       "Bash(npm run dev:*)",
       "WebSearch",
       "WebFetch(domain:wiki.wayforpay.com)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []

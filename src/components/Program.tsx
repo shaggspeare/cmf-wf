@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./styles/Program.css";
 
 export default function Program() {
@@ -143,6 +144,44 @@ export default function Program() {
               </div>
             </div>
             <div className="program-item-gap"></div>
+          </div>
+          <div className="program-btn-wrap">
+            <Link href="/program" className="primary-btn program-btn">
+              <div className="btn-inner">
+                <div>Дивитись повну програму</div>
+                <div className="btn-icon-wrap">
+                  <div className="btn-icon w-embed">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.4767 6.1664L6.00668 1.6964L7.18501 0.518066L13.6667 6.99973L7.18501 13.4814L6.00668 12.3031L10.4767 7.83307H0.333344V6.1664H10.4767Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                  <div className="btn-icon w-embed">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.4767 6.1664L6.00668 1.6964L7.18501 0.518066L13.6667 6.99973L7.18501 13.4814L6.00668 12.3031L10.4767 7.83307H0.333344V6.1664H10.4767Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div className="btn-shape"></div>
+            </Link>
           </div>
         </div>
       </div>

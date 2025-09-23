@@ -13,15 +13,19 @@ interface PricingPlan {
 }
 
 export default function PricingSection() {
-  const handleBuyClick = (plan: PricingPlan) => {
-    // Redirect to checkout page with plan information
-    window.location.href = `/checkout?plan=${encodeURIComponent(plan.name)}&price=${encodeURIComponent(plan.price)}`;
+  const handleSignUpClick = (plan: PricingPlan) => {
+    // Scroll to contact form
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
   const pricingPlans: PricingPlan[] = [
     {
       name: "MINI",
       price: "4200 UAH",
       features: [
+        "23 заняття",
         "Записи відео",
         "Завдання без зворотного фідбеку",
         "Доступ до лекцій 2 місяці",
@@ -31,7 +35,9 @@ export default function PricingSection() {
       name: "ACTIVE STANDART",
       price: "7200 UAH",
       originalPrice: "8000 UAH",
+      isPopular: true,
       features: [
+        "23 заняття",
         "Онлайн живі лекції по розкладу",
         "Підтримка викладача, фідбек",
         "Завдання та їх розбір",
@@ -45,6 +51,7 @@ export default function PricingSection() {
       price: "12500 UAH",
       originalPrice: "13500 UAH",
       features: [
+        "23 заняття",
         "Онлайн живі лекції по розкладу",
         "Підтримка викладача, фідбек",
         "Завдання та їх розбір",
@@ -56,26 +63,27 @@ export default function PricingSection() {
         "Сертифікат о проходженні курсу",
       ],
       isPremium: true,
-      isPopular: true,
     },
-    {
-      name: "VIP",
-      price: "16500 UAH",
-      originalPrice: "18500 UAH",
-      features: [
-        "Старт курсу і заняття у зручний для вас час один на один",
-        "Живі лекції",
-        "Розбір та виконання разом завдань",
-        "Доступ до лекцій та відео матеріалів 6 місяців",
-        "Індивідуальна зустріч offline",
-        "Додаткові матеріали (сайти для дизайнерів, література…)",
-        "Розбір ваших особистих кейсів",
-        "2 індивідуальні online консультації",
-        "Доводимо вашу ідею до прототипу",
-        "Сертифікат о проходженні курсу",
-      ],
-      isVip: true,
-    },
+    // VIP option commented out
+    // {
+    //   name: "VIP",
+    //   price: "16500 UAH",
+    //   originalPrice: "18500 UAH",
+    //   features: [
+    //     "23 лекції",
+    //     "Старт курсу і заняття у зручний для вас час один на один",
+    //     "Живі лекції",
+    //     "Розбір та виконання разом завдань",
+    //     "Доступ до лекцій та відео матеріалів 6 місяців",
+    //     "Індивідуальна зустріч offline",
+    //     "Додаткові матеріали (сайти для дизайнерів, література…)",
+    //     "Розбір ваших особистих кейсів",
+    //     "2 індивідуальні online консультації",
+    //     "Доводимо вашу ідею до прототипу",
+    //     "Сертифікат о проходженні курсу",
+    //   ],
+    //   isVip: true,
+    // },
   ];
 
   return (
@@ -123,11 +131,11 @@ export default function PricingSection() {
 
                 <div className="pricing-btn-wrap">
                   <button
-                    onClick={() => handleBuyClick(plan)}
+                    onClick={() => handleSignUpClick(plan)}
                     className="primary-btn w-inline-block"
                   >
                     <div className="btn-inner">
-                      <div>Купити</div>
+                      <div>Записатись</div>
                       <div className="btn-icon-wrap">
                         <div className="btn-icon w-embed">
                           <svg
