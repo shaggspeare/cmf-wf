@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import './styles/Navigation.css';
 
 export default function Navigation() {
@@ -7,18 +8,18 @@ export default function Navigation() {
         <div className="container">
           <div className="nav-layout">
             <div className="nav-left">
-              <a
+              <Link
                 href="/"
                 aria-current="page"
                 className="logo-wrap w-inline-block w--current"
               >
                 <img
                   loading="lazy"
-                  src="images/cmf/logo.png"
+                  src="/images/cmf/logo.png"
                   alt="logo"
                   className="logo"
                 />
-              </a>
+              </Link>
             </div>
             {/*<div className="nav-middle">*/}
             {/*  <div className="nav-menu">*/}
