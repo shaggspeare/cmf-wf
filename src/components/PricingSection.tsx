@@ -33,8 +33,8 @@ export default function PricingSection() {
     },
     {
       name: "ACTIVE STANDART",
-      price: "7200 UAH",
-      originalPrice: "8000 UAH",
+      price: "8000 UAH",
+      // originalPrice: "8000 UAH",
       isPopular: true,
       features: [
         "23 заняття",
@@ -48,8 +48,8 @@ export default function PricingSection() {
     },
     {
       name: "PREMIUM",
-      price: "12500 UAH",
-      originalPrice: "13500 UAH",
+      price: "13500 UAH",
+      // originalPrice: "13500 UAH",
       features: [
         "23 заняття",
         "Онлайн живі лекції по розкладу",
@@ -92,9 +92,9 @@ export default function PricingSection() {
         <div className="container">
           <div className="pricing-centered-title-wrap">
             <h2 className="pricing-centered-title">Вартість курсу</h2>
-            <p className="pricing-subtitle">
-              Встигни, поки діє знижка на курс до 07.10.2025
-            </p>
+            {/*<p className="pricing-subtitle">*/}
+            {/*  Встигни, поки діє знижка на курс до 07.10.2025*/}
+            {/*</p>*/}
           </div>
 
           <div className="pricing-layout">
