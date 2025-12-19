@@ -26,7 +26,7 @@ export default function PricingSection() {
       price: "6375 UAH",
       originalPrice: "7500 UAH",
       features: [
-        "28 занять",
+        "21 заняття",
         "Записи відео",
         "Завдання без зворотного фідбеку",
         "Доступ до лекцій 2 місяці",
