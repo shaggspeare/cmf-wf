@@ -26,7 +26,7 @@ export default function PricingSection() {
       price: "6375 UAH",
       originalPrice: "7500 UAH",
       features: [
-        "23 заняття",
+        "28 занять",
         "Записи відео",
         "Завдання без зворотного фідбеку",
         "Доступ до лекцій 2 місяці",
@@ -38,7 +38,7 @@ export default function PricingSection() {
       originalPrice: "14000 UAH",
       isPopular: true,
       features: [
-        "23 заняття",
+        "28 занять",
         "Онлайн живі лекції по розкладу",
         "Підтримка викладача, фідбек",
         "Завдання та їх розбір",
@@ -52,7 +52,7 @@ export default function PricingSection() {
       price: "21250 UAH",
       originalPrice: "25000 UAH",
       features: [
-        "23 заняття",
+        "28 занять",
         "Онлайн живі лекції по розкладу",
         "Підтримка викладача, фідбек",
         "Завдання та їх розбір",
