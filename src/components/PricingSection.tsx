@@ -23,7 +23,8 @@ export default function PricingSection() {
   const pricingPlans: PricingPlan[] = [
     {
       name: "MINI",
-      price: "4200 UAH",
+      price: "6375 UAH",
+      originalPrice: "7500 UAH",
       features: [
         "23 заняття",
         "Записи відео",
@@ -33,8 +34,8 @@ export default function PricingSection() {
     },
     {
       name: "ACTIVE STANDART",
-      price: "8000 UAH",
-      // originalPrice: "8000 UAH",
+      price: "11900 UAH",
+      originalPrice: "14000 UAH",
       isPopular: true,
       features: [
         "23 заняття",
@@ -48,8 +49,8 @@ export default function PricingSection() {
     },
     {
       name: "PREMIUM",
-      price: "13500 UAH",
-      // originalPrice: "13500 UAH",
+      price: "21250 UAH",
+      originalPrice: "25000 UAH",
       features: [
         "23 заняття",
         "Онлайн живі лекції по розкладу",
@@ -92,9 +93,11 @@ export default function PricingSection() {
         <div className="container">
           <div className="pricing-centered-title-wrap">
             <h2 className="pricing-centered-title">Вартість курсу</h2>
-            {/*<p className="pricing-subtitle">*/}
-            {/*  Встигни, поки діє знижка на курс до 07.10.2025*/}
-            {/*</p>*/}
+            <p className="pricing-subtitle">
+              Встигни, поки діє знижка 15% на курс до 31.12.2025
+              <br />
+              Запис за передоплатою 30% від вартості курсу
+            </p>
           </div>
 
           <div className="pricing-layout">

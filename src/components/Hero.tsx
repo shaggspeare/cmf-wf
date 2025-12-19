@@ -25,7 +25,7 @@ export default function Hero() {
             </div>
             <div className="hero-date-badge-wrap">
               <div className="hero-date-badge">
-                <div className="hero-date-text">Старт: 15 жовтня 2025</div>
+                <div className="hero-date-text">Старт: 5 лютого 2025</div>
               </div>
             </div>
           </div>

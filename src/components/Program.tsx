@@ -116,6 +116,35 @@ export default function Program() {
             <div className="program-item">
               <div className="program-item-icon-wrap">
                 <img
+                    src="/images/cmf/tech-program-2.jpeg"
+                    loading="lazy"
+                    alt="CMF Design"
+                    className="program-item-icon"
+                />
+              </div>
+              <div className="program-item-title-wrap">
+                <h2 className="program-item-title">Технології матеріалів (5 занять)</h2>
+              </div>
+              <div className="program-item-text-wrap">
+                <p className="program-item-text">
+                  Технологія виробництва та обробки скла, дерева, металу, пластику та мармуру.
+                </p>
+              </div>
+              <div className="program-item-bg"></div>
+              <div className="program-item-shape-wrap">
+                <div className="common-shape-wrap program-item-shape">
+                  <img
+                      src="images/s-shape-1.svg"
+                      loading="lazy"
+                      alt="s-shape-1"
+                      className="common-shape"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="program-item">
+              <div className="program-item-icon-wrap">
+                <img
                   src="/images/cmf/beton.jpg"
                   loading="lazy"
                   alt="Морфологія в дизайні"
